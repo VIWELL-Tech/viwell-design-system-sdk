@@ -1,18 +1,18 @@
 import { jsx as n, jsxs as g } from "react/jsx-runtime";
-import { forwardRef as m, memo as d } from "react";
-const x = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
+import x, { forwardRef as m, memo as d } from "react";
+const h = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
   "path",
   {
     fill: "#fff",
     d: "M8.64 6.814c.012-.91.5-1.772 1.277-2.25a2.778 2.778 0 0 0-2.162-1.168c-.91-.096-1.792.544-2.255.544-.473 0-1.186-.535-1.955-.519A2.903 2.903 0 0 0 1.122 4.9c-1.047 1.814-.266 4.48.738 5.945.502.718 1.089 1.52 1.856 1.492.752-.032 1.032-.48 1.94-.48.898 0 1.161.48 1.944.462.807-.014 1.315-.722 1.799-1.446.36-.512.638-1.077.823-1.675A2.613 2.613 0 0 1 8.64 6.814ZM7.16 2.432A2.64 2.64 0 0 0 7.765.54a2.685 2.685 0 0 0-1.737.899 2.534 2.534 0 0 0-.62 1.82 2.246 2.246 0 0 0 1.754-.828Z"
   }
-) }), h = m(x), Y = d(h), f = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 10, height: 11, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
+) }), f = m(h), y = d(f), _ = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 10, height: 11, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
   "path",
   {
     fill: "#fff",
     d: "M9.21 5.109 7.455 3.97 6.012 5.54l1.32 1.433 1.878-1.22a.351.351 0 0 0 .121-.136.404.404 0 0 0 .044-.186.405.405 0 0 0-.044-.186.351.351 0 0 0-.121-.136ZM7.158 3.776 5.227 2.523.996.084l4.779 5.197 1.383-1.505Zm-6.092 7.141 4.168-2.582 1.8-1.169-1.26-1.368-4.708 5.12ZM.713.294.708 10.79l4.829-5.25L.713.294Z"
   }
-) }), _ = m(f), y = d(_), M = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 14, height: 12, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
+) }), M = m(_), H = d(M), S = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/svg", width: 14, height: 12, fill: "none", ref: s, ...t, children: /* @__PURE__ */ n(
   "path",
   {
     stroke: "#fff",
@@ -21,25 +21,20 @@ const x = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/sv
     strokeWidth: 1.5,
     d: "M13 6H1m12 0-4.5 4.5M13 6 8.5 1.5"
   }
-) }), S = m(M), p = d(S), E = {
+) }), p = m(S), E = d(p), u = {
   PRIMARY: "primary"
-}, u = {
-  [E.PRIMARY]: `px-6 py-4 bg-system-black text-system-white hover:bg-grey-300 disabled:bg-grey-200 rounded-full transition-all ease-in-out duration-300 
+}, w = {
+  [u.PRIMARY]: `px-6 py-4 bg-system-black text-system-white hover:bg-grey-300 disabled:bg-grey-200 rounded-full transition-all ease-in-out duration-300 
                              font-medium text-white bg-black disabled:cursor-not-allowed`
-}, H = ({
-  variant: t,
-  label: s,
-  hasIcon: r = !1,
-  disabled: a = !1,
-  icon: o,
-  ...i
-}) => {
-  const c = u[t];
-  return console.log("variant", t, "classes", c), console.log("icon", o), /* @__PURE__ */ g("button", { className: c, disabled: a, ...i, children: [
-    s,
-    r && /* @__PURE__ */ n("span", { "data-testid": "button-icon", className: "inline-block ml-2", children: o || /* @__PURE__ */ n(p, {}) })
-  ] });
-}, e = {
+}, G = x.forwardRef(
+  ({ variant: t, label: s, hasIcon: r = !1, disabled: a = !1, icon: l, ...i }) => {
+    const c = w[t];
+    return /* @__PURE__ */ g("button", { className: c, disabled: a, ...i, children: [
+      s,
+      r && /* @__PURE__ */ n("span", { "data-testid": "button-icon", className: "inline-block ml-2", children: l || /* @__PURE__ */ n(E, {}) })
+    ] });
+  }
+), e = {
   H1: "h1",
   H2: "h2",
   H3: "h3",
@@ -53,13 +48,13 @@ const x = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/sv
   SMALL_12_M: "p-sm-12-m",
   SMALL_10: "p-sm-10",
   ALL_CAPS_12: "p-all-caps-12"
-}, l = {
+}, o = {
   SYSTEM_BLACK: "system-black",
   SYSTEM_WHITE: "system-white",
   SYSTEM_LIGHT_GREEN: "system-light-green",
   SYSTEM_GREEN: "system-green",
   SYSTEM_RED: "system-red"
-}, w = (t) => t.startsWith("h4") ? "h4" : t.startsWith("p") ? "p" : t, L = {
+}, R = (t) => t.startsWith("h4") ? "h4" : t.startsWith("p") ? "p" : t, L = {
   [e.H1]: "text-3xl font-medium leading-4xl",
   [e.H2]: "text-2xl font-medium leading-3xl",
   [e.H3]: "text-xl font-medium leading-2xl",
@@ -73,27 +68,27 @@ const x = (t, s) => /* @__PURE__ */ n("svg", { xmlns: "http://www.w3.org/2000/sv
   [e.SMALL_12_M]: "text-xs font-medium leading-sm",
   [e.SMALL_10]: "text-xs font-normal leading-xs",
   [e.ALL_CAPS_12]: "text-xs font-normal leading-sm"
-}, R = {
-  [l.SYSTEM_LIGHT_GREEN]: "text-system-light-green",
-  [l.SYSTEM_GREEN]: "text-system-green",
-  [l.SYSTEM_RED]: "text-system-red",
-  [l.SYSTEM_BLACK]: "text-system-black",
-  [l.SYSTEM_WHITE]: "text-system-white"
-}, G = ({ variant: t, color: s = "system-black", text: r, ...a }) => {
-  const o = w(t), i = L[t] + " " + R[s];
-  return /* @__PURE__ */ n(o, { className: i, ...a, children: r });
-}, b = () => /* @__PURE__ */ n("div", { children: "Banner" }), B = () => /* @__PURE__ */ n("div", { children: "Footer" }), k = (t, s = 16) => 1 / s * (t || 0) + "rem";
+}, A = {
+  [o.SYSTEM_LIGHT_GREEN]: "text-system-light-green",
+  [o.SYSTEM_GREEN]: "text-system-green",
+  [o.SYSTEM_RED]: "text-system-red",
+  [o.SYSTEM_BLACK]: "text-system-black",
+  [o.SYSTEM_WHITE]: "text-system-white"
+}, b = ({ variant: t, color: s = "system-black", text: r, ...a }) => {
+  const l = R(t), i = L[t] + " " + A[s];
+  return /* @__PURE__ */ n(l, { className: i, ...a, children: r });
+}, B = () => /* @__PURE__ */ n("div", { children: "Banner" }), k = () => /* @__PURE__ */ n("div", { children: "Footer" }), v = (t, s = 16) => 1 / s * (t || 0) + "rem";
 export {
-  Y as AppleIcon,
-  p as ArrowRightIcon,
-  H as Button,
-  E as ButtonVariants,
-  y as GoogleStoreIcon,
-  b as MlBanner,
-  B as OrFooter,
-  G as Text,
-  l as TextColors,
+  y as AppleIcon,
+  E as ArrowRightIcon,
+  G as Button,
+  u as ButtonVariants,
+  H as GoogleStoreIcon,
+  B as MlBanner,
+  k as OrFooter,
+  b as Text,
+  o as TextColors,
   e as TextVariants,
-  w as generateHTMLTag,
-  k as pxToRem
+  R as generateHTMLTag,
+  v as pxToRem
 };
