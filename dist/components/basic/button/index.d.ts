@@ -1,14 +1,13 @@
-import { ButtonHTMLAttributes } from 'react';
-export declare const AT_BUTTON_VARIANT: {
+import React, { ReactNode } from 'react';
+export declare const ButtonVariants: {
     readonly PRIMARY: "primary";
-    readonly SECONDARY: "secondary";
-    readonly TERTIARY: "tertiary";
 };
-export type ButtonVariant = keyof typeof AT_BUTTON_VARIANT;
-export declare const variantClasses: Record<ButtonVariant, string>;
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type BUTTONVARIANTS = keyof typeof ButtonVariants;
+export interface ButtonProps {
+    variant: (typeof ButtonVariants)[BUTTONVARIANTS];
     label: string;
-    variant?: ButtonVariant;
-    isDisabled?: boolean;
+    disabled?: boolean;
+    icon?: ReactNode;
 }
-export declare const Button: ({ label, variant, isDisabled, onClick }: ButtonProps) => import("react").JSX.Element;
+export declare const Button: React.FC<ButtonProps>;
+export {};
