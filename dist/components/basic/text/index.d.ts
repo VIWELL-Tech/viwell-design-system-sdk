@@ -1,5 +1,4 @@
 import React from 'react';
-import { COLORS } from '../../../../lib/enums';
 export declare const TextVariants: {
     readonly H1: "h1";
     readonly H2: "h2";
@@ -24,11 +23,11 @@ export declare const TextColors: {
 };
 type VARIANTSKEYS = keyof typeof TextVariants;
 type TEXTVARIANTS = (typeof TextVariants)[VARIANTSKEYS];
-type TEXTCOLORS = keyof typeof COLORS;
+type TEXTCOLORS = keyof typeof TextColors;
 export interface TextProps {
     variant: TEXTVARIANTS;
     text: string;
-    color?: TEXTCOLORS;
+    color?: (typeof TextColors)[TEXTCOLORS];
 }
 export declare const generateHTMLTag: (variant: TEXTVARIANTS) => TEXTVARIANTS | "h4" | "p";
 export declare const Text: React.FC<TextProps>;

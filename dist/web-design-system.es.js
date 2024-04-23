@@ -54,8 +54,8 @@ const c = {
   [s.SYSTEM_RED]: "text-system-red",
   [s.SYSTEM_BLACK]: "text-system-black",
   [s.SYSTEM_WHITE]: "text-system-white"
-}, S = ({ variant: t, color: n, text: r, ...l }) => {
-  const m = g(t), a = x[t] + " " + d[n || "system-black"];
+}, S = ({ variant: t, color: n = "system-black", text: r, ...l }) => {
+  const m = g(t), a = x[t] + " " + d[n];
   return /* @__PURE__ */ o(m, { className: a, ...l, children: r });
 }, M = () => /* @__PURE__ */ o("div", { children: "Banner" }), T = () => /* @__PURE__ */ o("div", { children: "Footer" }), R = (t, n = 16) => 1 / n * (t || 0) + "rem";
 export {
