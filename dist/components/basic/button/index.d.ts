@@ -7,6 +7,7 @@ export interface ButtonProps {
     variant: (typeof ButtonVariants)[BUTTONVARIANTS];
     label: string;
     disabled?: boolean;
+    hasIcon?: boolean;
     icon?: ReactNode;
 }
 export declare const Button: React.FC<ButtonProps>;
