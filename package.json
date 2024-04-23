@@ -1,13 +1,14 @@
 {
   "name": "@viwell-tech/viwell-design-system-sdk",
   "description": "VIWELL DESIGN SYSTEM SDK",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "UNLICENSED",
   "scripts": {
     "build-sdk": "./build.sh",
     "publish-main": "./publish.sh main"
   },
-  "main": "dist/index.js",
+  "main": "dist/web-design-system.umd.js",
+  "module": "dist/web-design-system.es.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
