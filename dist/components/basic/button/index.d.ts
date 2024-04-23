@@ -3,7 +3,7 @@ export declare const ButtonVariants: {
     readonly PRIMARY: "primary";
 };
 type BUTTONVARIANTS = keyof typeof ButtonVariants;
-export interface ButtonProps {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant: (typeof ButtonVariants)[BUTTONVARIANTS];
     label: string;
     disabled?: boolean;
