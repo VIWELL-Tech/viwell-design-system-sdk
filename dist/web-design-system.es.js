@@ -35,7 +35,7 @@ const T = {
   SYSTEM_LIGHT_GREEN: "system-light-green",
   SYSTEM_GREEN: "system-green",
   SYSTEM_RED: "system-red"
-}, x = (t) => t.startsWith("h4") ? "h4" : t.startsWith("p") ? "p" : t, c = {
+}, c = (t) => t.startsWith("h4") ? "h4" : t.startsWith("p") ? "p" : t, x = {
   [e.H1]: "text-3xl font-medium leading-4xl",
   [e.H2]: "text-2xl font-medium leading-3xl",
   [e.H3]: "text-xl font-medium leading-2xl",
@@ -55,8 +55,8 @@ const T = {
   [r.SYSTEM_RED]: "text-system-red",
   [r.SYSTEM_BLACK]: "text-system-black",
   [r.SYSTEM_WHITE]: "text-system-white"
-}, f = ({ variant: t, color: n = "system-black", text: o, ...l }) => {
-  const m = x(t), a = c[t] + " " + _[n];
+}, A = ({ variant: t, color: n = "system-black", text: o, ...l }) => {
+  const m = c(t), a = x[t] + " " + _[n];
   return /* @__PURE__ */ s(m, { className: a, ...l, children: o });
 }, E = (t, n) => /* @__PURE__ */ s("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: n, ...t, children: /* @__PURE__ */ s(
   "path",
@@ -64,17 +64,17 @@ const T = {
     fill: "#fff",
     d: "M8.64 6.814c.012-.91.5-1.772 1.277-2.25a2.778 2.778 0 0 0-2.162-1.168c-.91-.096-1.792.544-2.255.544-.473 0-1.186-.535-1.955-.519A2.903 2.903 0 0 0 1.122 4.9c-1.047 1.814-.266 4.48.738 5.945.502.718 1.089 1.52 1.856 1.492.752-.032 1.032-.48 1.94-.48.898 0 1.161.48 1.944.462.807-.014 1.315-.722 1.799-1.446.36-.512.638-1.077.823-1.675A2.613 2.613 0 0 1 8.64 6.814ZM7.16 2.432A2.64 2.64 0 0 0 7.765.54a2.685 2.685 0 0 0-1.737.899 2.534 2.534 0 0 0-.62 1.82 2.246 2.246 0 0 0 1.754-.828Z"
   }
-) }), M = i(E), A = g(M), Y = () => /* @__PURE__ */ s("div", { children: "Banner" }), p = () => /* @__PURE__ */ s("div", { children: "Footer" }), u = (t, n = 16) => 1 / n * (t || 0) + "rem";
+) }), M = i(E), f = g(M), p = () => /* @__PURE__ */ s("div", { children: "Banner" }), Y = () => /* @__PURE__ */ s("div", { children: "Footer" }), u = (t, n = 16) => 1 / n * (t || 0) + "rem";
 export {
   T as AT_BUTTON_VARIANT,
+  f as AppleIcon,
   h as Button,
-  A as Memo,
-  Y as MlBanner,
-  p as OrFooter,
-  f as Text,
+  p as MlBanner,
+  Y as OrFooter,
+  A as Text,
   r as TextColors,
   e as TextVariants,
-  x as generateHTMLTag,
+  c as generateHTMLTag,
   u as pxToRem,
   d as variantClasses
 };
