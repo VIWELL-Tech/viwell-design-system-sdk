@@ -203,7 +203,7 @@ const X = h.forwardRef(
 ), B = {
   S: "S"
 }, I = {
-  [B.S]: "flex flex-col self-center rounded-30 w-100 h-96 bg-system-white align-middle justify-around content-center px-10"
+  [B.S]: "flex flex-col self-center rounded-30 w-100 h-80 bg-system-white align-middle justify-around content-center px-10"
 };
 function q({ children: e, variant: s, isOpen: r }) {
   const [o, i] = y(!1);
