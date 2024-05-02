@@ -1,2 +1,2 @@
-export * from './ml-banner';
+export * from './modal';
 //# sourceMappingURL=index.d.ts.map

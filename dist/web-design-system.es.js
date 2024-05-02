@@ -1,7 +1,7 @@
 import { jsx as t, jsxs as g } from "react/jsx-runtime";
-import f, { forwardRef as d, memo as m } from "react";
-function y(e, r) {
-  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: r, ...e, children: /* @__PURE__ */ t(
+import h, { forwardRef as c, memo as m, useState as y, useEffect as p } from "react";
+function b(e, s) {
+  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: s, ...e, children: /* @__PURE__ */ t(
     "path",
     {
       fill: "#fff",
@@ -9,9 +9,9 @@ function y(e, r) {
     }
   ) });
 }
-const p = d(y), I = m(p);
-function b(e, r) {
-  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 10, height: 11, fill: "none", ref: r, ...e, children: /* @__PURE__ */ t(
+const w = c(b), W = m(w);
+function S(e, s) {
+  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 10, height: 11, fill: "none", ref: s, ...e, children: /* @__PURE__ */ t(
     "path",
     {
       fill: "#fff",
@@ -19,9 +19,9 @@ function b(e, r) {
     }
   ) });
 }
-const w = d(b), O = m(w);
-function M(e, r) {
-  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 14, height: 12, fill: "none", ref: r, ...e, children: /* @__PURE__ */ t(
+const M = c(S), $ = m(M);
+function E(e, s) {
+  return /* @__PURE__ */ t("svg", { xmlns: "http://www.w3.org/2000/svg", width: 14, height: 12, fill: "none", ref: s, ...e, children: /* @__PURE__ */ t(
     "path",
     {
       strokeLinecap: "round",
@@ -31,8 +31,8 @@ function M(e, r) {
     }
   ) });
 }
-const S = d(M), R = m(S);
-function E({ title: e, titleId: r, ...n }, l) {
+const R = c(E), k = m(R);
+function _({ title: e, titleId: s, ...r }, o) {
   return /* @__PURE__ */ g(
     "svg",
     {
@@ -40,11 +40,11 @@ function E({ title: e, titleId: r, ...n }, l) {
       width: 60,
       height: 61,
       fill: "none",
-      ref: l,
-      "aria-labelledby": r,
-      ...n,
+      ref: o,
+      "aria-labelledby": s,
+      ...r,
       children: [
-        e ? /* @__PURE__ */ t("title", { id: r, children: e }) : null,
+        e ? /* @__PURE__ */ t("title", { id: s, children: e }) : null,
         /* @__PURE__ */ t("circle", { cx: 30, cy: 30.25, r: 30, fill: "#FDEFED" }),
         /* @__PURE__ */ t(
           "path",
@@ -60,8 +60,8 @@ function E({ title: e, titleId: r, ...n }, l) {
     }
   );
 }
-const _ = d(E), F = m(_);
-function k({ title: e, titleId: r, ...n }, l) {
+const L = c(_), V = m(L);
+function A({ title: e, titleId: s, ...r }, o) {
   return /* @__PURE__ */ g(
     "svg",
     {
@@ -69,11 +69,11 @@ function k({ title: e, titleId: r, ...n }, l) {
       width: 60,
       height: 61,
       fill: "none",
-      ref: l,
-      "aria-labelledby": r,
-      ...n,
+      ref: o,
+      "aria-labelledby": s,
+      ...r,
       children: [
-        e ? /* @__PURE__ */ t("title", { id: r, children: e }) : null,
+        e ? /* @__PURE__ */ t("title", { id: s, children: e }) : null,
         /* @__PURE__ */ t("circle", { cx: 30, cy: 30.25, r: 30, fill: "#E0F7DE" }),
         /* @__PURE__ */ t(
           "path",
@@ -89,8 +89,8 @@ function k({ title: e, titleId: r, ...n }, l) {
     }
   );
 }
-const L = d(k), j = m(L);
-function A({ className: e, ...r }, n) {
+const T = c(A), Z = m(T);
+function v({ className: e, ...s }, r) {
   return /* @__PURE__ */ t(
     "svg",
     {
@@ -99,9 +99,9 @@ function A({ className: e, ...r }, n) {
       viewBox: "0 0 18 18",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      ref: n,
+      ref: r,
       className: e,
-      ...r,
+      ...s,
       children: /* @__PURE__ */ t(
         "path",
         {
@@ -114,35 +114,35 @@ function A({ className: e, ...r }, n) {
     }
   );
 }
-const T = d(A), v = m(T), o = {
+const C = c(v), Y = m(C), l = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
   TEXT: "text",
   SMALL_PRIMARY: "smallPrimary",
   SMALL_STROKE: "smallStroke"
-}, Y = {
-  [o.PRIMARY]: `flex justify-center items-center gap-x-2 px-6 py-4 bg-system-black text-system-white text-sm leading-md min-w-32 hover:bg-grey-300 disabled:bg-grey-200 rounded-full transition-all ease-in-out duration-300 
+}, N = {
+  [l.PRIMARY]: `flex justify-center items-center gap-x-2 px-6 py-4 bg-system-black text-system-white text-sm leading-md min-w-32 hover:bg-grey-300 disabled:bg-grey-200 rounded-full transition-all ease-in-out duration-300 
                              font-medium disabled:cursor-not-allowed`,
-  [o.SECONDARY]: "flex justify-center items-center gap-x-2 px-6 py-4 border-1 border-system-black text-system-black text-sm font-medium leading-md min-w-32 rounded-full group hover:border-grey-300 hover:text-grey-300 disabled:border-grey-100 disabled:text-grey-100",
-  [o.TEXT]: "flex justify-center items-center gap-x-2 text-system-black text-sm font-medium leading-md group hover:text-grey-300 disabled:text-grey-100",
-  [o.SMALL_PRIMARY]: "flex justify-center items-center gap-x-1 bg-system-white px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full shadow-md min-w-20 group hover:text-grey-300 hover:bg-grey-25 disabled:text-grey-100 disabled:bg-grey-25",
-  [o.SMALL_STROKE]: "flex justify-center items-center gap-x-1 px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full border-1 border-system-black min-w-20 group hover:text-grey-200 hover:border-grey-200 disabled:text-grey-100 disabled:border-grey-100"
-}, C = {
-  [o.PRIMARY]: "stroke-system-white",
-  [o.SECONDARY]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
-  [o.TEXT]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
-  [o.SMALL_PRIMARY]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
-  [o.SMALL_STROKE]: "stroke-system-black group-hover:stroke-grey-200 group-disabled:stroke-grey-100"
-}, P = f.forwardRef(
-  ({ variant: e, label: r, hasIcon: n = !1, disabled: l = !1, icon: i, ...c }) => {
-    const x = Y[e], u = C[e];
-    return /* @__PURE__ */ g("button", { className: x, disabled: l, ...c, children: [
-      n && ["smallPrimary", "smallStroke"].includes(e) && /* @__PURE__ */ t("span", { "data-testid": "start-button-icon", className: "inline-block", children: i ?? /* @__PURE__ */ t(v, { className: u }) }),
-      r,
-      n && ["primary", "secondary", "text"].includes(e) && /* @__PURE__ */ t("span", { "data-testid": "end-button-icon", className: "inline-block", children: i ?? /* @__PURE__ */ t(R, { className: u }) })
+  [l.SECONDARY]: "flex justify-center items-center gap-x-2 px-6 py-4 border-1 border-system-black text-system-black text-sm font-medium leading-md min-w-32 rounded-full group hover:border-grey-300 hover:text-grey-300 disabled:border-grey-100 disabled:text-grey-100",
+  [l.TEXT]: "flex justify-center items-center gap-x-2 text-system-black text-sm font-medium leading-md group hover:text-grey-300 disabled:text-grey-100",
+  [l.SMALL_PRIMARY]: "flex justify-center items-center gap-x-1 bg-system-white px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full shadow-md min-w-20 group hover:text-grey-300 hover:bg-grey-25 disabled:text-grey-100 disabled:bg-grey-25",
+  [l.SMALL_STROKE]: "flex justify-center items-center gap-x-1 px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full border-1 border-system-black min-w-20 group hover:text-grey-200 hover:border-grey-200 disabled:text-grey-100 disabled:border-grey-100"
+}, D = {
+  [l.PRIMARY]: "stroke-system-white",
+  [l.SECONDARY]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
+  [l.TEXT]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
+  [l.SMALL_PRIMARY]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
+  [l.SMALL_STROKE]: "stroke-system-black group-hover:stroke-grey-200 group-disabled:stroke-grey-100"
+}, K = h.forwardRef(
+  ({ variant: e, label: s, hasIcon: r = !1, disabled: o = !1, icon: i, ...a }) => {
+    const u = N[e], x = D[e];
+    return /* @__PURE__ */ g("button", { className: u, disabled: o, ...a, children: [
+      r && ["smallPrimary", "smallStroke"].includes(e) && /* @__PURE__ */ t("span", { "data-testid": "start-button-icon", className: "inline-block", children: i ?? /* @__PURE__ */ t(Y, { className: x }) }),
+      s,
+      r && ["primary", "secondary", "text"].includes(e) && /* @__PURE__ */ t("span", { "data-testid": "end-button-icon", className: "inline-block", children: i ?? /* @__PURE__ */ t(k, { className: x }) })
     ] });
   }
-), s = {
+), n = {
   H1: "h1",
   H2: "h2",
   H3: "h3",
@@ -157,68 +157,80 @@ const T = d(A), v = m(T), o = {
   SMALL_10: "p-sm-10",
   ALL_CAPS_12: "p-all-caps-12",
   HANDWRITTEN_14: "p-handwritten-14"
-}, a = {
+}, d = {
   SYSTEM_BLACK: "system-black",
   SYSTEM_WHITE: "system-white",
   SYSTEM_LIGHT_GREEN: "system-light-green",
   SYSTEM_GREEN: "system-green",
   SYSTEM_RED: "system-red",
   GREY_100: "grey-100"
-}, N = (e) => e.startsWith("h4") ? "h4" : e.startsWith("p") ? "p" : e, D = {
-  [s.H1]: "text-3xl font-medium leading-4xl",
-  [s.H2]: "text-2xl font-medium leading-3xl",
-  [s.H3]: "text-xl font-medium leading-2xl",
-  [s.H4M]: "text-lg font-medium leading-xl",
-  [s.H4R]: "text-lg font-normal leading-xl",
-  [s.BODY_REG]: "text-md font-normal leading-lg",
-  [s.BODY_14_REG]: "text-sm font-normal leading-md",
-  [s.BODY_M]: "text-md font-medium leading-lg",
-  [s.BODY_14_M]: "text-sm font-medium leading-md",
-  [s.SMALL_12_REG]: "text-xs font-normal leading-sm",
-  [s.SMALL_12_M]: "text-xs font-medium leading-sm",
-  [s.SMALL_10]: "text-xs font-normal leading-xs",
-  [s.ALL_CAPS_12]: "text-xs font-normal leading-sm",
-  [s.HANDWRITTEN_14]: "font-handwritten text-sm font-medium leading-lg"
-}, H = {
-  [a.SYSTEM_LIGHT_GREEN]: "text-system-light-green",
-  [a.SYSTEM_GREEN]: "text-system-green",
-  [a.SYSTEM_RED]: "text-system-red",
-  [a.SYSTEM_BLACK]: "text-system-black",
-  [a.SYSTEM_WHITE]: "text-system-white",
-  [a.GREY_100]: "text-grey-100"
+}, H = (e) => e.startsWith("h4") ? "h4" : e.startsWith("p") ? "p" : e, G = {
+  [n.H1]: "text-3xl font-medium leading-4xl",
+  [n.H2]: "text-2xl font-medium leading-3xl",
+  [n.H3]: "text-xl font-medium leading-2xl",
+  [n.H4M]: "text-lg font-medium leading-xl",
+  [n.H4R]: "text-lg font-normal leading-xl",
+  [n.BODY_REG]: "text-md font-normal leading-lg",
+  [n.BODY_14_REG]: "text-sm font-normal leading-md",
+  [n.BODY_M]: "text-md font-medium leading-lg",
+  [n.BODY_14_M]: "text-sm font-medium leading-md",
+  [n.SMALL_12_REG]: "text-xs font-normal leading-sm",
+  [n.SMALL_12_M]: "text-xs font-medium leading-sm",
+  [n.SMALL_10]: "text-xs font-normal leading-xs",
+  [n.ALL_CAPS_12]: "text-xs font-normal leading-sm",
+  [n.HANDWRITTEN_14]: "font-handwritten text-sm font-medium leading-lg"
+}, O = {
+  [d.SYSTEM_LIGHT_GREEN]: "text-system-light-green",
+  [d.SYSTEM_GREEN]: "text-system-green",
+  [d.SYSTEM_RED]: "text-system-red",
+  [d.SYSTEM_BLACK]: "text-system-black",
+  [d.SYSTEM_WHITE]: "text-system-white",
+  [d.GREY_100]: "text-grey-100"
 };
-function h({ variant: e, color: r = "system-black", text: n, ...l }) {
-  const i = N(e), c = D[e] + " " + H[r];
-  return /* @__PURE__ */ t(i, { className: c, ...l, children: n });
+function f({ variant: e, color: s = "system-black", text: r, ...o }) {
+  const i = H(e), a = G[e] + " " + O[s];
+  return /* @__PURE__ */ t(i, { className: a, ...o, children: r });
 }
-const W = f.forwardRef(
-  ({ label: e, name: r, error: n = !1, errorMessage: l = "", disabled: i, ...c }, x) => /* @__PURE__ */ g("div", { className: "flex flex-col mb-4", children: [
-    /* @__PURE__ */ t(h, { text: e, variant: "p-sm-12-m", color: i ? "grey-100" : "system-black" }),
-    /* @__PURE__ */ t("input", { id: r, ref: x, name: r, className: `
+const X = h.forwardRef(
+  ({ label: e, name: s, error: r = !1, errorMessage: o = "", disabled: i, ...a }, u) => /* @__PURE__ */ g("div", { className: "flex flex-col mb-4", children: [
+    /* @__PURE__ */ t(f, { text: e, variant: "p-sm-12-m", color: i ? "grey-100" : "system-black" }),
+    /* @__PURE__ */ t("input", { id: s, ref: u, name: s, className: `
      border-b-2 border-grey-50 h-8 outline-0 placeholder-grey-200 bg-transparent disabled:placeholder-grey-100 disabled:cursor-not-allowed
   text-system-black
-     `, disabled: i, ...c }),
-    n && /* @__PURE__ */ t("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ t(h, { text: l, variant: "p-sm-12-m", color: "system-red" }) })
+     `, disabled: i, ...a }),
+    r && /* @__PURE__ */ t("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ t(f, { text: o, variant: "p-sm-12-m", color: "system-red" }) })
   ] })
-);
-function Z() {
-  return /* @__PURE__ */ t("div", { children: "Banner" });
+), B = {
+  S: "S"
+}, I = {
+  [B.S]: "flex flex-col self-center rounded-30 w-100 h-96 bg-system-white align-middle justify-around content-center px-10"
+};
+function q({ children: e, variant: s, isOpen: r }) {
+  const [o, i] = y(!1);
+  p(() => {
+    i(r);
+  }, [r]);
+  const a = I[s];
+  return o ? /* @__PURE__ */ t("div", { className: j.modalContainer, children: /* @__PURE__ */ t("div", { className: a, children: e }) }) : null;
 }
-const $ = (e, r = 16) => 1 / r * (e ?? 0) + "rem";
+const j = {
+  modalContainer: "flex absolute top-0 bottom-0 right-0 left-0 bg-system-black bg-opacity-80 justify-center items-center"
+}, z = (e, s = 16) => 1 / s * (e ?? 0) + "rem";
 export {
-  I as AppleIcon,
-  R as ArrowRightIcon,
-  P as Button,
-  o as ButtonVariants,
-  v as EditIcon,
-  F as FailCircle,
-  O as GoogleStoreIcon,
-  W as Input,
-  Z as MlBanner,
-  j as SuccessCircle,
-  h as Text,
-  a as TextColors,
-  s as TextVariants,
-  N as generateHTMLTag,
-  $ as pxToRem
+  W as AppleIcon,
+  k as ArrowRightIcon,
+  K as Button,
+  l as ButtonVariants,
+  Y as EditIcon,
+  V as FailCircle,
+  $ as GoogleStoreIcon,
+  X as Input,
+  q as Modal,
+  B as ModalVariants,
+  Z as SuccessCircle,
+  f as Text,
+  d as TextColors,
+  n as TextVariants,
+  H as generateHTMLTag,
+  z as pxToRem
 };
