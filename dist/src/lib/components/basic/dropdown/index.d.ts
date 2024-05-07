@@ -1,0 +1,33 @@
+import * as React from 'react';
+export declare const placementVariants: {
+    readonly BOTTOM_LEFT: "bottomLeft";
+    readonly BOTTOM_RIGHT: "bottomRight";
+};
+type PlacementVariantsType = keyof typeof placementVariants;
+interface ItemType {
+    key: string;
+    label: string;
+    icon?: React.ReactNode;
+    disabled?: boolean;
+}
+interface MenuInfo {
+    key: string;
+    item: ItemType;
+}
+export interface DropdownProps {
+    children: React.ReactNode;
+    menu: ItemType[];
+    disabled?: boolean;
+    placement?: (typeof placementVariants)[PlacementVariantsType];
+    trigger?: 'click' | 'hover';
+    onClick?: (info: MenuInfo) => void;
+}
+export declare const Dropdown: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLButtonElement>>;
+export declare const styles: {
+    parentContainer: string;
+    dropdownContainer: string;
+    dropDownItem: string;
+    disabledItem: string;
+};
+export {};
+//# sourceMappingURL=index.d.ts.map
