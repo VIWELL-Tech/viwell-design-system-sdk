@@ -2,7 +2,11 @@ import { VoidFunc } from '../../../types';
 import { default as React, ReactElement } from 'react';
 
 export declare const ModalVariants: {
-    readonly S: "S";
+    readonly XS: "xs";
+    readonly S: "s";
+    readonly M: "m";
+    readonly L: "l";
+    readonly XL: "xl";
 };
 type VARIANTSKEYS = keyof typeof ModalVariants;
 type MODALVARIANTS = (typeof ModalVariants)[VARIANTSKEYS];

@@ -4,6 +4,7 @@ export * from './arrow-right';
 export * from './fail-circle';
 export * from './success-circle';
 export * from './edit-icon';
+export * from './small-arrow-right';
 export * from './arrow-down';
 export * from './exclamation';
 export * from './check';

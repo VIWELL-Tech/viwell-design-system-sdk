@@ -1,7 +1,7 @@
 {
   "name": "@viwell-tech/viwell-design-system-sdk",
   "description": "VIWELL DESIGN SYSTEM SDK",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "license": "UNLICENSED",
   "scripts": {
     "build-sdk": "./build.sh",

@@ -35,5 +35,9 @@ export declare const SPACES: {
     80: string;
     96: string;
     100: string;
+    110: string;
+    120: string;
+    150: string;
+    180: string;
 };
 //# sourceMappingURL=spaces.d.ts.map
