@@ -23,11 +23,5 @@ export interface DropdownProps {
     onClick?: (info: MenuInfo) => void;
 }
 export declare const Dropdown: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLButtonElement>>;
-export declare const styles: {
-    parentContainer: string;
-    dropdownContainer: string;
-    dropDownItem: string;
-    disabledItem: string;
-};
 export {};
 //# sourceMappingURL=index.d.ts.map
