@@ -22,7 +22,8 @@ export interface ModalProps {
     isOpen: boolean;
     renderContent: (props: RenderContentParams) => ReactElement;
     triggerModalElement: (props: TriggerModalElementParams) => ReactElement;
+    hasCloseIcon?: boolean;
 }
-export declare function Modal({ testId, variant, isOpen, triggerModalElement, renderContent }: ModalProps): React.JSX.Element;
+export declare function Modal({ testId, variant, isOpen, triggerModalElement, renderContent, hasCloseIcon }: ModalProps): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map
