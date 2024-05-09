@@ -10,5 +10,6 @@ export * from './exclamation';
 export * from './check';
 export * from './profile-icon';
 export * from './setting-icon';
+export * from './plus-icon';
 export * from './organization-icon';
 //# sourceMappingURL=index.d.ts.map
