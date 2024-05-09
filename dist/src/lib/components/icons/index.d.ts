@@ -14,4 +14,5 @@ export * from './upload-icon';
 export * from './plus-icon';
 export * from './organization-icon';
 export * from './x-icon';
+export * from './users-icon';
 //# sourceMappingURL=index.d.ts.map
