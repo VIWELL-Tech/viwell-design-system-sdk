@@ -769,7 +769,7 @@ function kt({ testId: t, variant: n, isOpen: r, triggerModalElement: s, renderCo
   return /* @__PURE__ */ d(Y, { children: [
     s({ onOpen: m }),
     /* @__PURE__ */ e(Y, { children: c && /* @__PURE__ */ e("div", { className: rt.modalContainer, "data-testid": t, children: /* @__PURE__ */ d("div", { className: l, children: [
-      !!i && /* @__PURE__ */ e("button", { className: "absolute top-4 right-4", onClick: A, children: /* @__PURE__ */ e(Ee, {}) }),
+      !!i && /* @__PURE__ */ e("button", { className: "absolute top-5 right-5", onClick: A, children: /* @__PURE__ */ e(Ee, {}) }),
       a({ onClose: A })
     ] }) }) })
   ] });
