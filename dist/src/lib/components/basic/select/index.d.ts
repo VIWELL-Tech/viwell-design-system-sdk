@@ -5,6 +5,7 @@ export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectE
     error?: boolean;
     errorMessage?: string;
     options: string[];
+    placeholder?: string;
 }
 export declare const Select: React.ForwardRefExoticComponent<SelectProps & React.RefAttributes<HTMLSelectElement>>;
 //# sourceMappingURL=index.d.ts.map

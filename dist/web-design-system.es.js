@@ -600,7 +600,7 @@ const O = {
     /* @__PURE__ */ e(C, { text: t, variant: "p-sm-12-m", color: a ? "grey-100" : "system-black" }),
     /* @__PURE__ */ e("div", { className: R.iconContainer, children: /* @__PURE__ */ e(fe, {}) }),
     /* @__PURE__ */ d("select", { id: n, ref: g, name: n, className: R.select, disabled: a, ...o, children: [
-      /* @__PURE__ */ e("option", { disabled: !0, selected: !0, hidden: !0, value: i, children: i }, i),
+      /* @__PURE__ */ e("option", { disabled: !0, selected: !0, hidden: !0, value: "", children: i }, i),
       A.map((c) => /* @__PURE__ */ e("option", { value: c, children: c }, c))
     ] }),
     r && /* @__PURE__ */ e("span", { role: "alert", className: R.error, children: /* @__PURE__ */ e(C, { text: s, variant: "p-sm-12-m", color: "system-red" }) })
