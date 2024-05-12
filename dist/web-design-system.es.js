@@ -488,14 +488,14 @@ const pt = D.forwardRef(
 }, wt = U.forwardRef(
   ({ children: t, menu: n, disabled: r, placement: s = "bottomLeft", trigger: a = "hover", onClick: A, ...i }) => {
     const o = Oe[s], [g, c] = H(!1), l = S(() => {
-      a === "click" && !r && c((p) => !p);
-    }, [a, r]), u = S(() => {
+      a === "click" && !r && c((u) => !u);
+    }, [a, r]), p = S(() => {
       a === "hover" && !r && c(!0);
     }, [a, r]), B = S(() => {
       a === "hover" && c(!1);
     }, [a]), J = S(
-      (p, X) => () => {
-        X.disabled || (A && (l(), A({ item: X, key: p })), l());
+      (u, X) => () => {
+        X.disabled || (A && (l(), A({ item: X, key: u })), l());
       },
       [A, c]
     );
@@ -504,23 +504,23 @@ const pt = D.forwardRef(
       {
         className: N.parentContainer,
         onClick: l,
-        onMouseEnter: u,
+        onMouseEnter: p,
         onMouseLeave: B,
         "data-testid": "dropdown-container",
         children: /* @__PURE__ */ d(Y, { children: [
           t,
-          g && /* @__PURE__ */ e("ul", { className: `${N.dropdownContainer} ${o}`, children: n.map((p) => /* @__PURE__ */ d(
+          g && /* @__PURE__ */ e("ul", { className: `${N.dropdownContainer} ${o}`, children: n.map((u) => /* @__PURE__ */ d(
             "li",
             {
-              className: p.disabled ? N.disabledItem : N.dropDownItem,
-              onClick: J(p.key, p),
-              "data-testid": p.key,
+              className: u.disabled ? N.disabledItem : N.dropDownItem,
+              onClick: J(u.key, u),
+              "data-testid": u.key,
               children: [
-                p.icon,
-                p.label
+                u.icon,
+                u.label
               ]
             },
-            p.key
+            u.key
           )) })
         ] })
       }
@@ -551,8 +551,8 @@ function Ue({
 }) {
   const o = r ?? ((c, l) => `default-list-key${l.toString()}`), g = Fe[A];
   return /* @__PURE__ */ e("div", { ...i, children: /* @__PURE__ */ e("ul", { role: "list", "data-testid": a, className: s ? O.borderedList : "", children: t.length && t.map((c, l) => {
-    const u = typeof o == "function" ? o(c, l) : String(c[o]);
-    return /* @__PURE__ */ e("li", { "data-testid": `list-item-${l}`, className: `${g} ${O.listItem}`, children: n(c, l) }, u);
+    const p = typeof o == "function" ? o(c, l) : String(c[o]);
+    return /* @__PURE__ */ e("li", { "data-testid": `list-item-${l}`, className: `${g} ${O.listItem}`, children: n(c, l) }, p);
   }) }) });
 }
 const O = {
@@ -660,7 +660,7 @@ const I = {
       ...A,
       children: [
         s.length && s.map((l) => {
-          var u;
+          var p;
           return /* @__PURE__ */ d(
             "a",
             {
@@ -670,7 +670,7 @@ const I = {
               "data-testid": l.key,
               rel: "noreferrer",
               children: [
-                (u = l.icon) == null ? void 0 : u.call(l, r),
+                (p = l.icon) == null ? void 0 : p.call(l, r),
                 /* @__PURE__ */ e(C, { text: l.title, variant: "p-sm-10", color: c })
               ]
             },
@@ -679,7 +679,7 @@ const I = {
         }),
         /* @__PURE__ */ e("div", { className: T.footerDivider, "data-testid": "footer-slash-divider", children: /* @__PURE__ */ e("span", { className: `h-4 inline-block w-[1.5px] ${o}` }) }),
         a.length && a.map((l) => {
-          var u;
+          var p;
           return /* @__PURE__ */ d(
             "a",
             {
@@ -689,7 +689,7 @@ const I = {
               "data-testid": l.key,
               rel: "noreferrer",
               children: [
-                (u = l.icon) == null ? void 0 : u.call(l, r),
+                (p = l.icon) == null ? void 0 : p.call(l, r),
                 /* @__PURE__ */ e(C, { text: l.title, variant: "p-sm-10", color: c })
               ]
             },
@@ -768,17 +768,17 @@ function kt({ testId: t, variant: n, isOpen: r, triggerModalElement: s, renderCo
     o(!0);
   }, c = () => {
     o(!1);
-  }, l = nt + " " + tt[n], u = rt.modalContainer + " z-[10000]";
+  }, l = nt + " " + tt[n];
   return /* @__PURE__ */ d(Y, { children: [
     s({ onOpen: g }),
-    /* @__PURE__ */ e(Y, { children: i && /* @__PURE__ */ e("div", { className: u, "data-testid": t, children: /* @__PURE__ */ d("div", { className: l, children: [
+    /* @__PURE__ */ e(Y, { children: i && /* @__PURE__ */ e("div", { className: rt.modalContainer, "data-testid": t, children: /* @__PURE__ */ d("div", { className: l, children: [
       !!A && /* @__PURE__ */ e("button", { className: "absolute top-5 right-5", onClick: c, children: /* @__PURE__ */ e(Ee, {}) }),
       a({ onClose: c })
     ] }) }) })
   ] });
 }
 const rt = {
-  modalContainer: "flex absolute top-0 bottom-0 right-0 left-0 bg-system-black bg-opacity-80 justify-center items-center"
+  modalContainer: "flex absolute top-0 bottom-0 right-0 left-0 bg-system-black bg-opacity-80 justify-center items-center z-50"
 }, Lt = m((t, n) => {
   const { path: r, separator: s, testId: a, onItemClick: A } = t, i = r.split("/").filter((c) => c !== ""), o = (c) => (l) => {
     l.preventDefault(), A(`/${i.slice(0, c + 1).join("/")}`);
