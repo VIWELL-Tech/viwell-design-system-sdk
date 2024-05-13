@@ -1,1 +1,4 @@
-export * from './src/lib/index'
+
+export * from './components';
+export * from './utils';
+//# sourceMappingURL=index.d.ts.map
