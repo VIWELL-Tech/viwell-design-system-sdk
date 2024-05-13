@@ -7,11 +7,14 @@ export declare const SizeVariants: {
 };
 type SIZEVARIANTS = keyof typeof SizeVariants;
 type SizeVariantsType = (typeof SizeVariants)[SIZEVARIANTS];
-export interface ListProps<T> extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
-    dataSource: T[];
-    renderItem: (item: T, index: number) => React.ReactNode;
+export interface ListDataType {
+    id: string | number;
+    title: string;
+    value: string;
+}
+export interface ListProps extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
+    dataSource: ListDataType[];
     size?: SizeVariantsType;
-    rowKey?: ((item: T) => React.Key) | keyof T;
     bordered?: boolean;
     testId?: string;
 }
@@ -20,10 +23,12 @@ export declare const sizeVariantClasses: {
     small: string;
     large: string;
 };
-export declare function List<T>({ dataSource, renderItem, rowKey, bordered, testId, size, ...rest }: ListProps<T>): React.JSX.Element;
+export declare function List({ dataSource, bordered, testId, size, ...rest }: ListProps): React.JSX.Element;
 export declare const listStyles: {
     borderedList: string;
     listItem: string;
+    listTile: string;
+    listValue: string;
 };
 export {};
 //# sourceMappingURL=index.d.ts.map

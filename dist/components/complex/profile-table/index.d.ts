@@ -1,17 +1,16 @@
-import { ListProps } from '../../..';
+import { AvatarProps, ListProps } from '../../..';
 import { default as React, HTMLAttributes } from 'react';
-import { AvatarProps } from '../../basic/avatar';
 
-export interface ProfileTableProps<T> extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
+export interface ProfileTableProps extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
     profileTitle: string;
-    listData: ListProps<T>;
+    listData: ListProps;
     onCtaClick: () => void;
     ctaLabel: string;
     profileAvatar?: AvatarProps;
     ctaIcon?: React.ReactNode;
     testId?: string;
 }
-export declare function ProfileTable<T>({ ctaLabel, ctaIcon, testId, onCtaClick, profileAvatar, profileTitle, listData, ...restProps }: ProfileTableProps<T>): React.JSX.Element;
+export declare function ProfileTable({ ctaLabel, ctaIcon, testId, onCtaClick, profileAvatar, profileTitle, listData, ...restProps }: ProfileTableProps): React.JSX.Element;
 export declare const profileStyles: {
     mainContainer: string;
     buttonContainer: string;
