@@ -810,7 +810,7 @@ function Kt({ tableHeadItems: t, tableRowsData: n, testId: r }) {
       ] }) }, a);
     }) }) }),
     /* @__PURE__ */ e("tbody", { children: n.map(({ items: a }) => /* @__PURE__ */ e("tr", { className: Q.tRow, children: /* @__PURE__ */ e(H, { children: a.map(({ label: s, children: d, isAlignEnd: o, extraStyle: c }) => {
-      const g = `flex ${o ? "justify-end" : ""} ${c ?? ""}`;
+      const g = ` flex items-center py-1 ${o ? "justify-end" : ""} ${c ?? ""}`;
       return /* @__PURE__ */ l(H, { children: [
         s && /* @__PURE__ */ e("td", { children: /* @__PURE__ */ e("div", { className: g, children: /* @__PURE__ */ e(x, { variant: "p-14-reg", text: s }) }) }, s),
         d && /* @__PURE__ */ e("td", { className: g, children: /* @__PURE__ */ e("div", { className: g, children: d }) })
@@ -822,7 +822,7 @@ const Q = {
   table: "w-full h-full",
   tcolumn: "text-gray-200 h-7",
   tcolumnContainer: "flex pe-3 h-full",
-  tRow: "h-12  hover:bg-grey-25 cursor-pointer"
+  tRow: "border-b-2 border-grey-50  hover:bg-grey-25 cursor-pointer"
 }, Gt = {
   S: "S",
   L: "L"
