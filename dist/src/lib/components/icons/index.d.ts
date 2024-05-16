@@ -18,4 +18,5 @@ export * from './users-icon';
 export * from './delete-icon';
 export * from './eye-open';
 export * from './eye-close';
+export * from './sort-icon';
 //# sourceMappingURL=index.d.ts.map

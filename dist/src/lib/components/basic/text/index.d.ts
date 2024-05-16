@@ -23,6 +23,7 @@ export declare const TextColors: {
     readonly SYSTEM_GREEN: "system-green";
     readonly SYSTEM_RED: "system-red";
     readonly GREY_100: "grey-100";
+    readonly GREY_200: "grey-200";
 };
 type VARIANTSKEYS = keyof typeof TextVariants;
 type TEXTVARIANTS = (typeof TextVariants)[VARIANTSKEYS];
