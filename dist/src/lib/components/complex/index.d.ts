@@ -8,4 +8,5 @@ export * from './profile-table';
 export * from './upload-avatar';
 export * from './pagination';
 export * from './skeleton';
+export * from './tabs';
 //# sourceMappingURL=index.d.ts.map
