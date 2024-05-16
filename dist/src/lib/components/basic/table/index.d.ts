@@ -10,6 +10,7 @@ interface TableHeadProps {
 }
 interface TableRowsProps {
     items: TableHeadProps[];
+    onRowClick: () => void;
 }
 export interface TableProps {
     tableHeadItems: TableHeadProps[];
