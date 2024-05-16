@@ -6,5 +6,6 @@ export * from './bread-crumb';
 export * from './snackbar';
 export * from './profile-table';
 export * from './upload-avatar';
+export * from './pagination';
 export * from './skeleton';
 //# sourceMappingURL=index.d.ts.map
