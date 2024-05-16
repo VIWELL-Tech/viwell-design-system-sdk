@@ -6,6 +6,7 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
     errorMessage?: string;
     rightInsideIcon?: React.ReactNode;
     rightOutsideIcon?: React.ReactNode;
+    isDefaultSelected?: boolean;
 }
 export declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
 //# sourceMappingURL=index.d.ts.map
