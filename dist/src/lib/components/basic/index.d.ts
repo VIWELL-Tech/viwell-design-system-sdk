@@ -5,4 +5,5 @@ export * from './dropdown';
 export * from './list';
 export * from './avatar';
 export * from './select';
+export * from './table';
 //# sourceMappingURL=index.d.ts.map
