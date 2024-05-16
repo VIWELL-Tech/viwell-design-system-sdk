@@ -6,6 +6,7 @@ interface TableHeadProps {
     onClick?: () => void;
     isAlignEnd?: boolean;
     children?: React.JSX.Element;
+    extraStyle?: string;
 }
 interface TableRowsProps {
     items: TableHeadProps[];
