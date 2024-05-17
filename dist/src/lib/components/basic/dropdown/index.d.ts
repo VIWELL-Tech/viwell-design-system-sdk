@@ -21,6 +21,7 @@ export interface DropdownProps {
     placement?: (typeof placementVariants)[PlacementVariantsType];
     trigger?: 'click' | 'hover';
     onClick?: (info: MenuInfo) => void;
+    isCloseToTop?: boolean;
 }
 export declare const Dropdown: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLButtonElement>>;
 export {};
