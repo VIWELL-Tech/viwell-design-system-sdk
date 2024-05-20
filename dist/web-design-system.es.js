@@ -1160,27 +1160,27 @@ const F = {
   avatarFlex: "flex flex-col justify-center items-center gap-y-2",
   userText: "text-system-black font-medium text-md leading-lg"
 };
-function wn({ onUpload: t }) {
-  const n = me(null), [a, r] = V(""), s = (i) => {
-    i.preventDefault(), n.current && n.current.click();
-  }, c = (i) => {
-    const m = i.target.files ? i.target.files[0] : null;
-    m && r(URL.createObjectURL(m)), t(m);
+function wn({ onUpload: t, defaultImage: n }) {
+  const a = me(null), [r, s] = V(""), c = (m) => {
+    m.preventDefault(), a.current && a.current.click();
+  }, i = (m) => {
+    const l = m.target.files ? m.target.files[0] : null;
+    l && s(URL.createObjectURL(l)), t(l);
   };
   return /* @__PURE__ */ o("div", { className: ee.container, children: [
-    /* @__PURE__ */ e(ce, { size: "large", src: a }),
+    /* @__PURE__ */ e(ce, { size: "large", src: r || n }),
     /* @__PURE__ */ o("div", { className: ee.buttonContainer, children: [
       /* @__PURE__ */ e(
         "input",
         {
-          ref: n,
+          ref: a,
           type: "file",
           accept: "image/*",
           className: ee.input,
-          onChange: c
+          onChange: i
         }
       ),
-      /* @__PURE__ */ e(ne, { variant: "smallStroke", label: "Add logo", hasIcon: !0, icon: /* @__PURE__ */ e(Oe, {}), onClick: s })
+      /* @__PURE__ */ e(ne, { variant: "smallStroke", label: "Add logo", hasIcon: !0, icon: /* @__PURE__ */ e(Oe, {}), onClick: c })
     ] })
   ] });
 }
