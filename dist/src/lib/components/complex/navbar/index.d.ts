@@ -14,7 +14,6 @@ interface MenuItemType extends HTMLAttributes<HTMLAnchorElement> {
 }
 export interface NavbarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'className'> {
     menuItems: MenuItemType[];
-    onItemClick: (path: string) => void;
     variant?: (typeof NavbarVariants)[NavbarVariantsType];
     rightActions?: Array<{
         key: string;
