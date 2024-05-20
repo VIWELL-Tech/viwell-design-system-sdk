@@ -6,4 +6,5 @@ export * from './list';
 export * from './avatar';
 export * from './select';
 export * from './table';
+export * from './loader';
 //# sourceMappingURL=index.d.ts.map
