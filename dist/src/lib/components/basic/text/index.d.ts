@@ -32,8 +32,9 @@ export interface TextProps {
     variant: TEXTVARIANTS;
     text: string;
     color?: (typeof TextColors)[TEXTCOLORS];
+    isTruncated?: boolean;
 }
 export declare const generateHTMLTag: (variant: TEXTVARIANTS) => TEXTVARIANTS | "h4" | "p";
-export declare function Text({ variant, color, text, ...props }: TextProps): React.JSX.Element;
+export declare function Text({ variant, color, text, isTruncated, ...props }: TextProps): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map
