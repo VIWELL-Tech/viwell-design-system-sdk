@@ -5,6 +5,7 @@ export interface BreadcrumbProps extends Omit<HTMLAttributes<HTMLDivElement>, 'c
     onItemClick: (path: string) => void;
     separator?: React.ReactNode;
     testId?: string;
+    isCapital?: boolean;
 }
 export declare const Breadcrumb: React.ForwardRefExoticComponent<BreadcrumbProps & React.RefAttributes<HTMLDivElement>>;
 export declare const breadcrumbStyles: {

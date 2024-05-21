@@ -9,6 +9,7 @@ export interface AvatarProps extends Omit<React.HtmlHTMLAttributes<HTMLSpanEleme
     src?: string;
     alt?: string;
     children?: React.ReactNode;
+    abbreviateUpper?: boolean;
 }
 export declare const variantClasses: {
     large: string;

@@ -22,6 +22,7 @@ export * from './chevron-double-right';
 export * from './delete-icon';
 export * from './eye-open';
 export * from './eye-close';
+export * from './right-tick';
 export * from './sort-icon';
 export * from './dots-icon';
 //# sourceMappingURL=index.d.ts.map
