@@ -4,7 +4,10 @@ export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectE
     label: string;
     error?: boolean;
     errorMessage?: string;
-    options: string[];
+    options: Array<{
+        label: string;
+        value: string;
+    }>;
     placeholder?: string;
     isDefaultSelected?: Boolean;
 }

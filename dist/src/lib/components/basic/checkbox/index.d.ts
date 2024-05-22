@@ -1,7 +1,7 @@
 import { default as React } from 'react';
 
-export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'className' | 'type'> {
-    title?: string;
+export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'className' | 'type' | 'title'> {
+    title?: React.ReactNode;
     error?: boolean;
     errorMessage?: string;
     testId?: string;
