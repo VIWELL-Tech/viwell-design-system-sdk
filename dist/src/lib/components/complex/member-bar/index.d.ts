@@ -9,12 +9,12 @@ export interface MemberBarProps {
     labelIcon?: React.JSX.Element;
     label: string;
     onCtaClick: () => void;
-    hasIcon?: boolean;
+    hasCTA?: boolean;
     ctaLabel?: string;
     variant: MEMBERBARVARIANTS;
     ctaIcon?: React.ReactNode;
     testId?: string;
 }
-export declare function MemberBar({ label, labelIcon, ctaLabel, onCtaClick, variant, ctaIcon, testId, hasIcon, }: MemberBarProps): React.JSX.Element;
+export declare function MemberBar({ label, labelIcon, ctaLabel, onCtaClick, variant, ctaIcon, testId, hasCTA, }: MemberBarProps): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map

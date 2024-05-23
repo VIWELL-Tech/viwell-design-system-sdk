@@ -974,7 +974,7 @@ function Ln({
   variant: s,
   ctaIcon: i,
   testId: c,
-  hasIcon: l = !1
+  hasCTA: l = !1
 }) {
   return /* @__PURE__ */ o(
     "div",
