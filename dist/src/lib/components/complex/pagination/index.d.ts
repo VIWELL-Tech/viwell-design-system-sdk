@@ -6,8 +6,11 @@ export interface PaginationProps {
     total?: number;
     pageSize?: number;
     defaultPageSize?: number;
-    showTotal?: boolean;
+    isShowTotal?: boolean;
+    maxVisiblePages?: number;
+    isShowQuickJumper?: boolean;
     onChange?: (page: number, pageSize: number) => void;
+    testId?: string;
 }
 export declare function Pagination(props: PaginationProps): React.JSX.Element;
 //# sourceMappingURL=index.d.ts.map
