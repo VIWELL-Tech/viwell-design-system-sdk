@@ -1,6 +1,6 @@
-import { jsx as e, jsxs as o, Fragment as P } from "react/jsx-runtime";
+import { jsx as e, jsxs as o, Fragment as E } from "react/jsx-runtime";
 import * as me from "react";
-import V, { forwardRef as h, memo as A, useState as D, useCallback as E, useEffect as ge, useRef as pe } from "react";
+import V, { forwardRef as h, memo as A, useState as D, useCallback as Y, useEffect as ge, useRef as pe } from "react";
 function Ae(t, n) {
   const { fill: a = "#fff", ...r } = t;
   return /* @__PURE__ */ e("svg", { xmlns: "http://www.w3.org/2000/svg", width: 11, height: 13, fill: "none", ref: n, ...r, children: /* @__PURE__ */ e(
@@ -616,11 +616,11 @@ const Nt = h(Mt), fn = A(Nt), I = {
   [I.SMALL_STROKE]: "stroke-system-black group-hover:stroke-grey-200 group-disabled:stroke-grey-100"
 }, ie = V.forwardRef(
   ({ variant: t, label: n, hasIcon: a = !1, disabled: r = !1, icon: s, ...i }, c) => {
-    const l = St[t], m = Tt[t];
+    const l = St[t], d = Tt[t];
     return /* @__PURE__ */ o("button", { className: l, disabled: r, ...i, children: [
-      a && ["smallPrimary", "smallStroke"].includes(t) && /* @__PURE__ */ e("span", { "data-testid": "start-button-icon", className: "inline-block", children: s ?? /* @__PURE__ */ e(Ie, { className: m }) }),
+      a && ["smallPrimary", "smallStroke"].includes(t) && /* @__PURE__ */ e("span", { "data-testid": "start-button-icon", className: "inline-block", children: s ?? /* @__PURE__ */ e(Ie, { className: d }) }),
       n,
-      a && ["primary", "secondary", "text"].includes(t) && /* @__PURE__ */ e("span", { "data-testid": "end-button-icon", className: "inline-block", children: s ?? /* @__PURE__ */ e(ye, { className: m }) })
+      a && ["primary", "secondary", "text"].includes(t) && /* @__PURE__ */ e("span", { "data-testid": "end-button-icon", className: "inline-block", children: s ?? /* @__PURE__ */ e(ye, { className: d }) })
     ] });
   }
 ), y = {
@@ -670,7 +670,7 @@ const Nt = h(Mt), fn = A(Nt), I = {
   [H.GREY_100]: "text-grey-100",
   [H.GREY_200]: "text-grey-200"
 };
-function L({ variant: t, color: n = "system-black", text: a, isTruncated: r = !0, ...s }) {
+function M({ variant: t, color: n = "system-black", text: a, isTruncated: r = !0, ...s }) {
   const i = It(t), c = `${Rt[t] + " "}  ${Bt[n] + " "} ${r ? "truncate" : ""}`;
   return /* @__PURE__ */ e(i, { className: c, ...s, children: a });
 }
@@ -684,21 +684,21 @@ const pn = V.forwardRef(
     rightInsideIcon: i,
     rightOutsideIcon: c,
     onChange: l,
-    type: m,
+    type: d,
     value: f,
-    isDefaultSelected: d = !1,
+    isDefaultSelected: m = !1,
     ...v
   }, g) => {
-    const u = m === "date", [x, p] = D(d), F = `
+    const u = d === "date", [x, p] = D(m), P = `
      border-b-2 border-grey-50 w-full h-8 outline-0 placeholder-grey-200 bg-transparent disabled:placeholder-grey-100 disabled:cursor-not-allowed
-  ${!x && u ? "text-grey-200" : "text-system-black"} `, [Q, te] = D(m), N = (T) => {
+  ${!x && u ? "text-grey-200" : "text-system-black"} `, [Q, te] = D(d), N = (T) => {
       p(!!T.target.value), l && l(T);
-    }, S = E(() => {
+    }, S = Y(() => {
       s || te((T) => T === "password" ? "text" : "password");
     }, [Q, s]);
-    return /* @__PURE__ */ e(P, { children: /* @__PURE__ */ o("div", { className: "flex flex-col mb-4", children: [
+    return /* @__PURE__ */ e(E, { children: /* @__PURE__ */ o("div", { className: "flex flex-col mb-4", children: [
       /* @__PURE__ */ e(
-        L,
+        M,
         {
           "data-testid": "input-label",
           text: t,
@@ -714,14 +714,14 @@ const pn = V.forwardRef(
               id: n,
               ref: g,
               name: n,
-              className: F,
+              className: P,
               disabled: s,
               onChange: N,
               type: Q,
               ...v
             }
           ),
-          m === "password" ? /* @__PURE__ */ e(
+          d === "password" ? /* @__PURE__ */ e(
             "div",
             {
               "data-testid": "password-input-wrapper",
@@ -733,7 +733,7 @@ const pn = V.forwardRef(
         ] }),
         c && V.isValidElement(c) && /* @__PURE__ */ e("div", { className: "flex self-end", children: c })
       ] }),
-      a && /* @__PURE__ */ e("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ e(L, { text: r, variant: "p-sm-12-m", color: "system-red", isTruncated: !1 }) })
+      a && /* @__PURE__ */ e("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ e(M, { text: r, variant: "p-sm-12-m", color: "system-red", isTruncated: !1 }) })
     ] }) });
   }
 ), ce = {
@@ -744,18 +744,15 @@ const pn = V.forwardRef(
   [ce.BOTTOM_RIGHT]: "right-0 translate-y-1"
 }, An = me.forwardRef(
   ({ children: t, menu: n, disabled: a, placement: r = "bottomLeft", trigger: s = "hover", onClick: i, isCloseToTop: c = !1 }) => {
-    const l = Ht[r], m = c ? "top-0" : "", [f, d] = D(!1), v = E(() => {
-      s === "click" && !a && d((p) => !p);
-    }, [s, a]), g = E(() => {
-      s === "hover" && !a && d(!0);
-    }, [s, a]), u = E(() => {
-      s === "hover" && d(!1);
-    }, [s]), x = E(
-      (p, M) => () => {
-        M.disabled || (i && (v(), i({ item: M, key: p })), v());
-      },
-      [i, d]
-    );
+    const l = Ht[r], d = c ? "top-0" : "", [f, m] = D(!1), v = Y(() => {
+      s === "click" && !a && m((p) => !p);
+    }, [s, a]), g = Y(() => {
+      s === "hover" && !a && m(!0);
+    }, [s, a]), u = Y(() => {
+      s === "hover" && m(!1);
+    }, [s]), x = (p, k) => {
+      k.disabled || (i && (v(), i({ item: k, key: p })), v());
+    };
     return /* @__PURE__ */ e(
       "div",
       {
@@ -764,13 +761,15 @@ const pn = V.forwardRef(
         onMouseEnter: g,
         onMouseLeave: u,
         "data-testid": "dropdown-container",
-        children: /* @__PURE__ */ o(P, { children: [
+        children: /* @__PURE__ */ o(E, { children: [
           t,
-          f && /* @__PURE__ */ e("ul", { className: `${z.dropdownContainer} ${l} ${m}`, children: n.map((p) => /* @__PURE__ */ o(
+          f && /* @__PURE__ */ e("ul", { className: `${z.dropdownContainer} ${l} ${d}`, children: n.map((p) => /* @__PURE__ */ o(
             "li",
             {
               className: p.disabled ? z.disabledItem : z.dropDownItem,
-              onClick: x(p.key, p),
+              onClick: (k) => {
+                k.stopPropagation(), x(p.key, p);
+              },
               "data-testid": p.key,
               children: [
                 p.icon,
@@ -827,7 +826,7 @@ const $ = {
   [X.SMALL]: "inline-flex w-[2rem] h-[2rem] items-center justify-center p-2"
 }, fe = me.forwardRef(
   ({ size: t = "small", src: n, draggable: a, alt: r, children: s, id: i, abbreviateUpper: c, ...l }) => {
-    const m = Pt[t], f = Ft[t], d = jt[t];
+    const d = Pt[t], f = Ft[t], m = jt[t];
     function v() {
       if (n && typeof n == "string")
         return /* @__PURE__ */ e(
@@ -846,9 +845,9 @@ const $ = {
         };
         return /* @__PURE__ */ e("span", { className: f, style: x, "data-testid": "avatar-text-child", children: g });
       }
-      return /* @__PURE__ */ e("span", { className: d, "data-testid": "avatar-child", children: s });
+      return /* @__PURE__ */ e("span", { className: m, "data-testid": "avatar-child", children: s });
     }
-    return /* @__PURE__ */ e("span", { className: m, "data-testid": i, ...l, children: /* @__PURE__ */ e(v, {}) });
+    return /* @__PURE__ */ e("span", { className: d, "data-testid": i, ...l, children: /* @__PURE__ */ e(v, {}) });
   }
 ), wn = V.forwardRef(
   ({
@@ -860,19 +859,19 @@ const $ = {
     options: i,
     placeholder: c,
     onChange: l,
-    isDefaultSelected: m,
+    isDefaultSelected: d,
     value: f,
-    ...d
+    ...m
   }, v) => {
-    const [g, u] = D(m), x = g ? "text-system-black" : "text-grey-200";
+    const [g, u] = D(d), x = g ? "text-system-black" : "text-grey-200";
     ge(() => {
       f && u(!0);
     }, [f]);
-    const p = (M) => {
-      u(!!M.target.value), l && l(M);
+    const p = (k) => {
+      u(!!k.target.value), l && l(k);
     };
     return /* @__PURE__ */ o("div", { className: q.container, children: [
-      /* @__PURE__ */ e(L, { text: t, variant: "p-sm-12-m", color: s ? "grey-100" : "system-black" }),
+      /* @__PURE__ */ e(M, { text: t, variant: "p-sm-12-m", color: s ? "grey-100" : "system-black" }),
       /* @__PURE__ */ e("div", { className: q.iconContainer, children: /* @__PURE__ */ e(Ze, {}) }),
       /* @__PURE__ */ o(
         "select",
@@ -883,14 +882,14 @@ const $ = {
           className: q.select + " " + x,
           disabled: s,
           onChange: p,
-          ...d,
+          ...m,
           children: [
             /* @__PURE__ */ e("option", { disabled: !0, selected: !0, hidden: !0, value: "", children: c }, c),
-            i.map(({ label: M, value: F }) => /* @__PURE__ */ e("option", { value: F, children: M }, F))
+            i.map(({ label: k, value: P }) => /* @__PURE__ */ e("option", { value: P, children: k }, P))
           ]
         }
       ),
-      a && /* @__PURE__ */ e("span", { role: "alert", className: q.error, children: /* @__PURE__ */ e(L, { text: r, variant: "p-sm-12-m", color: "system-red" }) })
+      a && /* @__PURE__ */ e("span", { role: "alert", className: q.error, children: /* @__PURE__ */ e(M, { text: r, variant: "p-sm-12-m", color: "system-red" }) })
     ] });
   }
 ), q = {
@@ -902,16 +901,16 @@ const $ = {
 function xn({ tableHeadItems: t, tableRowsData: n, testId: a }) {
   return /* @__PURE__ */ o("table", { "data-testid": a, className: _.table, children: [
     /* @__PURE__ */ e("thead", { children: /* @__PURE__ */ e("tr", { className: "border-b-2 border-grey-100", children: t.map(({ label: r, icon: s, onClick: i, isAlignEnd: c, extraStyle: l }) => {
-      const m = _.tcolumn + " " + l;
-      return /* @__PURE__ */ e("td", { className: m, onClick: i, children: /* @__PURE__ */ o("div", { className: `${_.tcolumnContainer}  ${c ? "justify-end" : "justify-between"}`, children: [
-        /* @__PURE__ */ e(L, { variant: "p-sm-12-m", text: r ?? "", color: "grey-200" }),
+      const d = _.tcolumn + " " + l;
+      return /* @__PURE__ */ e("td", { className: d, onClick: i, children: /* @__PURE__ */ o("div", { className: `${_.tcolumnContainer}  ${c ? "justify-end" : "justify-between"}`, children: [
+        /* @__PURE__ */ e(M, { variant: "p-sm-12-m", text: r ?? "", color: "grey-200" }),
         s && s
       ] }) }, r);
     }) }) }),
-    /* @__PURE__ */ e("tbody", { children: n.map(({ items: r, onRowClick: s }) => /* @__PURE__ */ e("tr", { className: _.tRow, onClick: s, children: /* @__PURE__ */ e(P, { children: r.map(({ label: i, children: c, isAlignEnd: l, extraStyle: m }) => {
-      const f = ` flex items-center py-1 ${l ? "justify-end" : ""} ${m ?? ""}`;
-      return /* @__PURE__ */ o(P, { children: [
-        i && /* @__PURE__ */ e("td", { children: /* @__PURE__ */ e("div", { className: f, children: /* @__PURE__ */ e(L, { variant: "p-14-reg", text: i }) }) }, i),
+    /* @__PURE__ */ e("tbody", { children: n.map(({ items: r, onRowClick: s }) => /* @__PURE__ */ e("tr", { className: _.tRow, onClick: s, children: /* @__PURE__ */ e(E, { children: r.map(({ label: i, children: c, isAlignEnd: l, extraStyle: d }) => {
+      const f = ` flex items-center py-1 ${l ? "justify-end" : ""} ${d ?? ""}`;
+      return /* @__PURE__ */ o(E, { children: [
+        i && /* @__PURE__ */ e("td", { children: /* @__PURE__ */ e("div", { className: f, children: /* @__PURE__ */ e(M, { variant: "p-14-reg", text: i }) }) }, i),
         c && /* @__PURE__ */ e("td", { className: f, children: /* @__PURE__ */ e("div", { className: f, children: c }) })
       ] });
     }) }) }, r[0].label)) })
@@ -923,7 +922,7 @@ const _ = {
   tcolumnContainer: "flex pe-3 h-full",
   tRow: "border-b-2 border-grey-50  hover:bg-grey-25 cursor-pointer"
 }, Cn = V.forwardRef(
-  ({ name: t, title: n, disabled: a, testId: r, error: s, errorMessage: i, ...c }, l) => /* @__PURE__ */ o(P, { children: [
+  ({ name: t, title: n, disabled: a, testId: r, error: s, errorMessage: i, ...c }, l) => /* @__PURE__ */ o(E, { children: [
     /* @__PURE__ */ o(
       "label",
       {
@@ -950,7 +949,7 @@ const _ = {
         ]
       }
     ),
-    s && /* @__PURE__ */ e("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ e(L, { text: i ?? "", variant: "p-sm-12-m", color: "system-red" }) })
+    s && /* @__PURE__ */ e("span", { role: "alert", className: "text-system-red text-sm mt-1", children: /* @__PURE__ */ e(M, { text: i ?? "", variant: "p-sm-12-m", color: "system-red" }) })
   ] })
 ), O = {
   container: "inline-flex items-center gap-x-3",
@@ -984,7 +983,7 @@ function Ln({
       children: [
         /* @__PURE__ */ o("div", { className: re.labelContainer, children: [
           n && /* @__PURE__ */ e("div", { className: re.iconContainer, children: n }),
-          /* @__PURE__ */ e(L, { variant: "p-14-m", text: t })
+          /* @__PURE__ */ e(M, { variant: "p-14-m", text: t })
         ] }),
         /* @__PURE__ */ e("div", { children: l && /* @__PURE__ */ e(ie, { variant: "smallStroke", label: a ?? "", onClick: r, hasIcon: !0, icon: i }) })
       ]
@@ -1011,7 +1010,7 @@ const re = {
   [Z.DEFAULT]: H.SYSTEM_BLACK,
   [Z.TRANSPARENT]: H.SYSTEM_WHITE
 }, Mn = h((t, n) => {
-  const { variant: a = "default", footerLinkItems: r, footerDownloadLinks: s, ...i } = t, c = Yt[a], l = Xt[a], m = Qt[a], f = Ut[a];
+  const { variant: a = "default", footerLinkItems: r, footerDownloadLinks: s, ...i } = t, c = Yt[a], l = Xt[a], d = Qt[a], f = Ut[a];
   return /* @__PURE__ */ o(
     "footer",
     {
@@ -1020,41 +1019,41 @@ const re = {
       ref: n,
       ...i,
       children: [
-        r.length && r.map((d) => {
+        r.length && r.map((m) => {
           var v;
           return /* @__PURE__ */ o(
             "a",
             {
-              href: d.href,
+              href: m.href,
               target: "_blank",
-              className: `${ee.anchorLink} ${m}`,
-              "data-testid": d.key,
+              className: `${ee.anchorLink} ${d}`,
+              "data-testid": m.key,
               rel: "noreferrer",
               children: [
-                (v = d.icon) == null ? void 0 : v.call(d, a),
-                /* @__PURE__ */ e(L, { text: d.title, variant: "p-sm-10", color: f })
+                (v = m.icon) == null ? void 0 : v.call(m, a),
+                /* @__PURE__ */ e(M, { text: m.title, variant: "p-sm-10", color: f })
               ]
             },
-            d.key
+            m.key
           );
         }),
         /* @__PURE__ */ e("div", { className: ee.footerDivider, "data-testid": "footer-slash-divider", children: /* @__PURE__ */ e("span", { className: `h-4 inline-block w-[1.5px] ${l}` }) }),
-        s.length && s.map((d) => {
+        s.length && s.map((m) => {
           var v;
           return /* @__PURE__ */ o(
             "a",
             {
-              href: d.href,
+              href: m.href,
               target: "_blank",
               className: ee.anchorIcon,
-              "data-testid": d.key,
+              "data-testid": m.key,
               rel: "noreferrer",
               children: [
-                (v = d.icon) == null ? void 0 : v.call(d, a),
-                /* @__PURE__ */ e(L, { text: d.title, variant: "p-sm-10", color: f })
+                (v = m.icon) == null ? void 0 : v.call(m, a),
+                /* @__PURE__ */ e(M, { text: m.title, variant: "p-sm-10", color: f })
               ]
             },
-            d.key
+            m.key
           );
         })
       ]
@@ -1070,36 +1069,36 @@ const re = {
 }, Kt = {
   [Wt.DEFAULT]: "bg-system-white"
 }, Nn = h((t, n) => {
-  const { variant: a = "default", menuItems: r, rightActions: s, ...i } = t, c = Kt[a], l = E(
-    (m) => (f) => {
-      m.disabled && f.preventDefault();
+  const { variant: a = "default", menuItems: r, rightActions: s, ...i } = t, c = Kt[a], l = Y(
+    (d) => (f) => {
+      d.disabled && f.preventDefault();
     },
     []
   );
   return /* @__PURE__ */ o("header", { className: `${c} ${R.mainHeader}`, ref: n, ...i, children: [
     /* @__PURE__ */ o("div", { className: R.navContainer, children: [
       /* @__PURE__ */ e("img", { src: Ot, className: "w-32 h-7", alt: "Viwell Logo" }),
-      /* @__PURE__ */ e("nav", { className: R.navMenu, children: r.length && r.map((m) => /* @__PURE__ */ o("div", { className: "flex items-center gap-x-1", children: [
-        m.icon,
+      /* @__PURE__ */ e("nav", { className: R.navMenu, children: r.length && r.map((d) => /* @__PURE__ */ o("div", { className: "flex items-center gap-x-1", children: [
+        d.icon,
         /* @__PURE__ */ e(
           "a",
           {
-            className: `${m.active ? R.activeNavLink : m.disabled ? R.disabledNavLink : R.defaultNavLink}`,
-            href: m.href,
-            onClick: l(m),
-            children: m.label
+            className: `${d.active ? R.activeNavLink : d.disabled ? R.disabledNavLink : R.defaultNavLink}`,
+            href: d.href,
+            onClick: l(d),
+            children: d.label
           },
-          m.key
+          d.key
         )
-      ] }, m.key)) })
+      ] }, d.key)) })
     ] }),
-    /* @__PURE__ */ e("div", { className: R.rightContainer, children: (s == null ? void 0 : s.length) && s.map((m) => /* @__PURE__ */ e(
+    /* @__PURE__ */ e("div", { className: R.rightContainer, children: (s == null ? void 0 : s.length) && s.map((d) => /* @__PURE__ */ e(
       "div",
       {
-        className: m.disabled ? R.disabledRightActionItem : R.rightActionItem,
-        children: m.actionItem
+        className: d.disabled ? R.disabledRightActionItem : R.rightActionItem,
+        children: d.actionItem
       },
-      m.key
+      d.key
     )) })
   ] });
 }), R = {
@@ -1128,14 +1127,14 @@ const re = {
   [W.XL]: "w-180 h-150 "
 }, Jt = "flex flex-col self-center relative rounded-30 bg-system-white align-middle justify-around content-center px-10";
 function Sn({ testId: t, variant: n, isOpen: a, triggerModalElement: r, renderContent: s, hasCloseIcon: i }) {
-  const [c, l] = D(a), m = () => {
+  const [c, l] = D(a), d = () => {
     l(!0);
   }, f = () => {
     l(!1);
-  }, d = Jt + " " + Gt[n];
-  return /* @__PURE__ */ o(P, { children: [
-    r({ onOpen: m }),
-    /* @__PURE__ */ e(P, { children: c && /* @__PURE__ */ e("div", { className: zt.modalContainer, "data-testid": t, children: /* @__PURE__ */ o("div", { className: d, children: [
+  }, m = Jt + " " + Gt[n];
+  return /* @__PURE__ */ o(E, { children: [
+    r({ onOpen: d }),
+    /* @__PURE__ */ e(E, { children: c && /* @__PURE__ */ e("div", { className: zt.modalContainer, "data-testid": t, children: /* @__PURE__ */ o("div", { className: m, children: [
       !!i && /* @__PURE__ */ e("button", { className: "absolute top-5 right-5", onClick: f, "data-testid": "close-icon", children: /* @__PURE__ */ e(nt, {}) }),
       s({ onClose: f })
     ] }) }) })
@@ -1144,13 +1143,13 @@ function Sn({ testId: t, variant: n, isOpen: a, triggerModalElement: r, renderCo
 const zt = {
   modalContainer: "flex fixed top-0 bottom-0 right-0 left-0 bg-system-black bg-opacity-80 justify-center items-center z-50"
 }, Tn = h((t, n) => {
-  const { path: a, separator: r, testId: s, onItemClick: i, isCapital: c = !0 } = t, l = a.split("/").filter((d) => d !== ""), m = (d) => () => {
-    i(`/${l.slice(0, d + 1).join("/")}`);
-  }, f = (d) => d < l.length - 1;
-  return /* @__PURE__ */ e("div", { ref: n, "data-testid": s, children: /* @__PURE__ */ e("ul", { className: se.mainContainer, children: l.map((d, v) => /* @__PURE__ */ o("li", { "data-testid": d, className: se.breadItem, children: [
-    /* @__PURE__ */ e("div", { "data-testid": `${d}-link`, onClick: m(v), className: se.breadTitle, children: c ? Zt(d) : d }),
+  const { path: a, separator: r, testId: s, onItemClick: i, isCapital: c = !0 } = t, l = a.split("/").filter((m) => m !== ""), d = (m) => () => {
+    i(`/${l.slice(0, m + 1).join("/")}`);
+  }, f = (m) => m < l.length - 1;
+  return /* @__PURE__ */ e("div", { ref: n, "data-testid": s, children: /* @__PURE__ */ e("ul", { className: se.mainContainer, children: l.map((m, v) => /* @__PURE__ */ o("li", { "data-testid": m, className: se.breadItem, children: [
+    /* @__PURE__ */ e("div", { "data-testid": `${m}-link`, onClick: d(v), className: se.breadTitle, children: c ? Zt(m) : m }),
     f(v) && (V.isValidElement(r) ? r : /* @__PURE__ */ e(He, { "data-testid": "breadcrumb-default-separator" }))
-  ] }, d)) }) });
+  ] }, m)) }) });
 }), se = {
   mainContainer: "flex items-center gap-x-[0.625rem] flex-wrap",
   breadItem: "flex items-center gap-x-[0.625rem]",
@@ -1167,19 +1166,19 @@ const zt = {
   [G.POSITIVE]: /* @__PURE__ */ e(Xe, { "data-testid": "snackbar-positive-icon" }),
   [G.NEGATIVE]: /* @__PURE__ */ e(Fe, { "data-testid": "snackbar-negative-icon" })
 };
-function In({ variant: t, message: n, testId: a, isVisble: r }) {
-  const s = t === "neutral", [i, c] = D(r);
+function In({ variant: t, message: n, testId: a, isVisible: r, onReset: s }) {
+  const i = t === "neutral", [c, l] = D(!1);
   return ge(() => {
-    r && c(r), setTimeout(() => {
-      c(!1);
+    r && l(!0), setTimeout(() => {
+      l(!1), s ? s() : l(!1);
     }, 4e3);
-  }, [r]), i ? /* @__PURE__ */ o("div", { "data-testid": `${a ?? "snackbar"}`, className: `${de.container} ${$t[t]}`, children: [
-    !s && /* @__PURE__ */ e("div", { className: de.iconContainer, children: qt[t] }),
-    /* @__PURE__ */ e(L, { variant: "p-14-reg", text: n })
+  }, [r]), c ? /* @__PURE__ */ o("div", { "data-testid": `${a ?? "snackbar"}`, className: `${de.container} ${$t[t]}`, children: [
+    !i && /* @__PURE__ */ e("div", { className: de.iconContainer, children: qt[t] }),
+    /* @__PURE__ */ e(M, { variant: "p-14-reg", text: n })
   ] }) : null;
 }
 const de = {
-  container: "flex w-fit rounded-2xl p-5 shadow-md",
+  container: "fixed bottom-0 right-0 flex w-fit rounded-2xl p-5 shadow-md",
   iconContainer: "mr-2.5"
 };
 function Rn({
@@ -1192,18 +1191,18 @@ function Rn({
   listData: c,
   ...l
 }) {
-  return /* @__PURE__ */ o("div", { className: Y.mainContainer, "data-testid": a, ...l, children: [
-    /* @__PURE__ */ e("div", { className: Y.buttonContainer, "data-testid": "profile-CTA", children: /* @__PURE__ */ e(ie, { variant: "smallStroke", label: t, hasIcon: !0, icon: n, onClick: r }) }),
-    /* @__PURE__ */ e("div", { className: Y.contentArea, children: /* @__PURE__ */ o("div", { className: Y.content, children: [
-      /* @__PURE__ */ o("div", { className: Y.avatarFlex, children: [
+  return /* @__PURE__ */ o("div", { className: j.mainContainer, "data-testid": a, ...l, children: [
+    /* @__PURE__ */ e("div", { className: j.buttonContainer, "data-testid": "profile-CTA", children: /* @__PURE__ */ e(ie, { variant: "smallStroke", label: t, hasIcon: !0, icon: n, onClick: r }) }),
+    /* @__PURE__ */ e("div", { className: j.contentArea, children: /* @__PURE__ */ o("div", { className: j.content, children: [
+      /* @__PURE__ */ o("div", { className: j.avatarFlex, children: [
         /* @__PURE__ */ e(fe, { size: "large", ...s }),
-        /* @__PURE__ */ e("div", { className: Y.userText, children: i })
+        /* @__PURE__ */ e("div", { className: j.userText, children: i })
       ] }),
       /* @__PURE__ */ e(Dt, { bordered: !0, size: "default", ...c })
     ] }) })
   ] });
 }
-const Y = {
+const j = {
   mainContainer: "bg-system-white rounded-30 p-4",
   buttonContainer: "flex justify-end",
   contentArea: "px-12 pt-2 pb-12",
@@ -1215,8 +1214,8 @@ function Bn({ onUpload: t, defaultImage: n }) {
   const a = pe(null), [r, s] = D(""), i = (l) => {
     l.preventDefault(), a.current && a.current.click();
   }, c = (l) => {
-    const m = l.target.files ? l.target.files[0] : null;
-    m && s(URL.createObjectURL(m)), t(m);
+    const d = l.target.files ? l.target.files[0] : null;
+    d && s(URL.createObjectURL(d)), t(d);
   };
   return /* @__PURE__ */ o("div", { className: oe.container, children: [
     /* @__PURE__ */ e(fe, { size: "large", src: r || n }),
@@ -1249,16 +1248,16 @@ function Hn(t) {
     defaultPageSize: i = 10,
     isShowTotal: c = !0,
     maxVisiblePages: l = 5,
-    isShowQuickJumper: m = !0,
+    isShowQuickJumper: d = !0,
     onChange: f,
-    testId: d,
+    testId: m,
     ...v
-  } = t, g = Math.ceil((r ?? 0) / (s ?? i)) || 1, [u, x] = D(() => n !== void 0 ? n : a), p = E(
+  } = t, g = Math.ceil((r ?? 0) / (s ?? i)) || 1, [u, x] = D(() => n !== void 0 ? n : a), p = Y(
     (N) => () => {
       N >= 1 && N <= g && (x(N), f && f(N, s ?? i));
     },
     [g, x, f, s, i]
-  ), M = () => {
+  ), k = () => {
     const N = [];
     for (let S = 1; S <= g; S++)
       N.push(
@@ -1274,12 +1273,12 @@ function Hn(t) {
         )
       );
     return N;
-  }, F = () => {
+  }, P = () => {
     let T = Math.max(0, u - Math.floor(l / 2));
     const J = Math.min(g, T + l);
     J - T < l && (T = Math.max(0, J - l));
-    const j = [];
-    j.push(
+    const F = [];
+    F.push(
       /* @__PURE__ */ e(
         "li",
         {
@@ -1290,7 +1289,7 @@ function Hn(t) {
         },
         "pagination-item-1"
       )
-    ), T > 0 && u !== 1 && j.push(
+    ), T > 0 && u !== 1 && F.push(
       /* @__PURE__ */ e(
         "button",
         {
@@ -1304,7 +1303,7 @@ function Hn(t) {
     );
     for (let ne = T + 1; ne < J; ne++) {
       const U = ne + 1;
-      j.push(
+      F.push(
         /* @__PURE__ */ e(
           "li",
           {
@@ -1317,7 +1316,7 @@ function Hn(t) {
         )
       );
     }
-    return g > l && u + l <= g && j.push(
+    return g > l && u + l <= g && F.push(
       /* @__PURE__ */ e(
         "button",
         {
@@ -1328,7 +1327,7 @@ function Hn(t) {
         },
         "next-button"
       )
-    ), J < g && j.push(
+    ), J < g && F.push(
       /* @__PURE__ */ e(
         "li",
         {
@@ -1339,9 +1338,9 @@ function Hn(t) {
         },
         `pagination-item-${g}`
       )
-    ), j;
+    ), F;
   }, Q = (u - 1) * (s ?? i) + 1, te = Math.min(u * (s ?? i), r ?? 0);
-  return /* @__PURE__ */ o("div", { className: w.mainContainer, "data-testid": d, ...v, children: [
+  return /* @__PURE__ */ o("div", { className: w.mainContainer, "data-testid": m, ...v, children: [
     /* @__PURE__ */ e("div", { children: c && r !== void 0 && r > 0 && /* @__PURE__ */ o("div", { className: w.showTotal, "data-testid": "total-items", children: [
       /* @__PURE__ */ e("span", { className: "text-grey-200", children: "Showing" }),
       " ",
@@ -1366,7 +1365,7 @@ function Hn(t) {
           children: /* @__PURE__ */ e(he, { "data-testid": "ChevronLeftIcon" })
         }
       ),
-      /* @__PURE__ */ e("div", { className: "", children: /* @__PURE__ */ e("ul", { className: w.itemContainer, children: m ? F() : M() }) }),
+      /* @__PURE__ */ e("div", { className: "", children: /* @__PURE__ */ e("ul", { className: w.itemContainer, children: d ? P() : k() }) }),
       /* @__PURE__ */ e(
         "button",
         {
@@ -1528,29 +1527,29 @@ const b = {
   lastCol: "flex flex-col items-end gap-y-2"
 };
 function En({ testId: t, ...n }) {
-  return /* @__PURE__ */ o("div", { "data-testid": t, className: k.container, ...n, children: [
-    /* @__PURE__ */ o("div", { className: k.flexItem, children: [
-      /* @__PURE__ */ e("div", { "data-testid": "firstText", className: `${k.firstText} w-24` }),
-      /* @__PURE__ */ e("div", { "data-testid": "secondText", className: k.secondText })
+  return /* @__PURE__ */ o("div", { "data-testid": t, className: L.container, ...n, children: [
+    /* @__PURE__ */ o("div", { className: L.flexItem, children: [
+      /* @__PURE__ */ e("div", { "data-testid": "firstText", className: `${L.firstText} w-24` }),
+      /* @__PURE__ */ e("div", { "data-testid": "secondText", className: L.secondText })
     ] }),
-    /* @__PURE__ */ o("div", { className: k.paginationContent, children: [
-      /* @__PURE__ */ e("div", { className: k.iconButton, children: /* @__PURE__ */ e(he, { "data-testid": "ChevronLeftIcon" }) }),
+    /* @__PURE__ */ o("div", { className: L.paginationContent, children: [
+      /* @__PURE__ */ e("div", { className: L.iconButton, children: /* @__PURE__ */ e(he, { "data-testid": "ChevronLeftIcon" }) }),
       [...Array(4)].map((a, r) => /* @__PURE__ */ e(
         "div",
         {
           "data-testid": `pagination-item-${r}`,
-          className: k.paginationItem,
-          children: /* @__PURE__ */ e("div", { className: k.innerItem })
+          className: L.paginationItem,
+          children: /* @__PURE__ */ e("div", { className: L.innerItem })
         },
         `pagination-item-${r}`
       )),
       /* @__PURE__ */ e(le, { "data-testid": "MenuHorizontalIcon" }),
-      /* @__PURE__ */ e("div", { "data-testid": "last-pagination-item", className: k.paginationItem, children: /* @__PURE__ */ e("div", { className: k.innerItem }) }),
-      /* @__PURE__ */ e("div", { className: k.iconButton, children: /* @__PURE__ */ e(ue, { "data-testid": "ChevronRightIcon" }) })
+      /* @__PURE__ */ e("div", { "data-testid": "last-pagination-item", className: L.paginationItem, children: /* @__PURE__ */ e("div", { className: L.innerItem }) }),
+      /* @__PURE__ */ e("div", { className: L.iconButton, children: /* @__PURE__ */ e(ue, { "data-testid": "ChevronRightIcon" }) })
     ] })
   ] });
 }
-const k = {
+const L = {
   container: "flex items-center justify-between animate-pulse",
   flexItem: "flex flex-col gap-y-2",
   firstText: "h-2.5 bg-gray-200 rounded-full",
@@ -1561,22 +1560,22 @@ const k = {
   iconButton: "px-1.5"
 }, Pn = V.forwardRef((t, n) => {
   var v;
-  const { items: a = [], onChange: r, activeKey: s, testId: i, ...c } = t, [l, m] = D(s ?? ((v = a[0]) == null ? void 0 : v.key)), f = (g) => (u) => {
-    g !== l && (m(g), r && r(g));
-  }, d = (g) => g === l;
+  const { items: a = [], onChange: r, activeKey: s, testId: i, ...c } = t, [l, d] = D(s ?? ((v = a[0]) == null ? void 0 : v.key)), f = (g) => (u) => {
+    g !== l && (d(g), r && r(g));
+  }, m = (g) => g === l;
   return /* @__PURE__ */ o("div", { ...c, ref: n, "data-testid": i, children: [
     /* @__PURE__ */ e("div", { className: K.tabWrapper, children: a.map(({ key: g, label: u, disabled: x, icon: p }) => /* @__PURE__ */ e(
       "div",
       {
         "data-testid": g,
-        className: `${d(g) && !x ? K.activeTab : ""}`,
+        className: `${m(g) && !x ? K.activeTab : ""}`,
         onClick: x ? void 0 : f(g),
         children: /* @__PURE__ */ o(
           "span",
           {
             "data-testid": `tab-item-${g}`,
             role: "button",
-            className: `${K.tabItem} ${d(g) && !x ? "text-system-black" : x ? K.disabledItem : "text-grey-200"}`,
+            className: `${K.tabItem} ${m(g) && !x ? "text-system-black" : x ? K.disabledItem : "text-grey-200"}`,
             children: [
               V.isValidElement(p) && p,
               u
@@ -1586,7 +1585,7 @@ const k = {
       },
       g
     )) }),
-    /* @__PURE__ */ e("div", { className: K.tabContent, children: a.map((g) => /* @__PURE__ */ e("div", { "data-testid": `tab-content-${g.key}`, children: d(g.key) && g.children }, g.key)) })
+    /* @__PURE__ */ e("div", { className: K.tabContent, children: a.map((g) => /* @__PURE__ */ e("div", { "data-testid": `tab-content-${g.key}`, children: m(g.key) && g.children }, g.key)) })
   ] });
 }), K = {
   tabWrapper: "grid grid-flow-col relative after:absolute after:border-b-2 after:border-grey-50 after:bottom-0 after:w-full",
@@ -1650,7 +1649,7 @@ export {
   xn as Table,
   Zn as TableSkeleton,
   Pn as Tabs,
-  L as Text,
+  M as Text,
   H as TextColors,
   y as TextVariants,
   Bn as UploadAvatar,
@@ -1669,7 +1668,7 @@ export {
   Gt as modelVariantClasses,
   R as navStyles,
   ce as placementVariants,
-  Y as profileStyles,
+  j as profileStyles,
   vn as pxToRem,
   Vt as sizeVariantClasses,
   ee as styles,

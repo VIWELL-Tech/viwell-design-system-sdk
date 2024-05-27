@@ -9,10 +9,11 @@ type VARIANTSKEYS = keyof typeof SnackbarVariants;
 type SNACKBARVARIANTS = (typeof SnackbarVariants)[VARIANTSKEYS];
 export interface SnackbarProps {
     variant: SNACKBARVARIANTS;
-    isVisble: boolean;
+    isVisible: boolean;
+    onReset?: () => void;
     message: string;
     testId?: string;
 }
-export declare function Snackbar({ variant, message, testId, isVisble }: SnackbarProps): React.JSX.Element | null;
+export declare function Snackbar({ variant, message, testId, isVisible, onReset }: SnackbarProps): React.JSX.Element | null;
 export {};
 //# sourceMappingURL=index.d.ts.map
