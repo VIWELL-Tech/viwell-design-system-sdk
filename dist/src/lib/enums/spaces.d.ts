@@ -39,6 +39,7 @@ export declare const SPACES: {
     120: string;
     150: string;
     180: string;
+    500: string;
     688: string;
     640: string;
 };
