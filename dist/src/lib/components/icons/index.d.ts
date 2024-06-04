@@ -25,5 +25,7 @@ export * from './eye-close';
 export * from './right-tick';
 export * from './sort-icon';
 export * from './dots-icon';
+export * from './ascending-icon';
+export * from './descending-icon';
 export * from './search-icon';
 //# sourceMappingURL=index.d.ts.map

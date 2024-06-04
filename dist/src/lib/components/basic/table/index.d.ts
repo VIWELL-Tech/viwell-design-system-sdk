@@ -1,22 +1,53 @@
-import { default as React } from 'react';
+import { PaginationProps } from '../../..';
+import { default as React, HTMLAttributes, Key } from 'react';
 
-interface TableHeadProps {
-    label?: string;
-    icon?: React.JSX.Element;
-    onClick?: () => void;
-    isAlignEnd?: boolean;
-    children?: React.JSX.Element;
-    extraStyle?: string;
+export declare const tableLayouts: {
+    readonly FIXED: "fixed";
+    readonly AUTO: "auto";
+};
+type TableLayout = keyof typeof tableLayouts;
+type TableLayoutType = (typeof tableLayouts)[TableLayout];
+type DataIndex = string | number | ReadonlyArray<string | number>;
+type AlignType = 'left' | 'center' | 'right';
+type GetRowKey<T> = (record: T, index?: number) => Key;
+export interface PaginationChange {
+    page: number;
+    pageSize: number;
 }
-interface TableRowsProps {
-    items: TableHeadProps[];
-    onRowClick: () => void;
+export interface SortChange {
+    key: string;
+    order: 'asc' | 'desc';
 }
-export interface TableProps {
-    tableHeadItems: TableHeadProps[];
-    tableRowsData: TableRowsProps[];
+export interface ChangeParams {
+    pagination?: PaginationChange;
+    sort?: SortChange;
+}
+export interface ColumnType<T> {
+    key: string;
+    title?: React.ReactNode;
+    align?: AlignType;
+    dataIndex?: DataIndex;
+    sort?: boolean;
+    ellipsis?: boolean;
+    render?: (record: T, index: number) => React.ReactNode;
+}
+export type ColumnsType<T = unknown> = Array<ColumnType<T>>;
+export interface TableProps<T> extends Omit<HTMLAttributes<HTMLTableElement>, 'className' | 'onChange'> {
+    columns?: ColumnsType<T>;
+    dataSource?: readonly T[];
+    rowKey?: string | GetRowKey<T>;
+    isRowClickable?: boolean;
+    tableLayout?: TableLayoutType;
+    total?: number;
+    pagination?: boolean | PaginationProps;
     testId?: string;
+    onChange?: (params: ChangeParams) => void;
+    onRowClick?: (data: T, index?: number) => void;
 }
-export declare function Table({ tableHeadItems, tableRowsData, testId }: TableProps): React.JSX.Element;
+export declare const layoutVariantClasses: {
+    auto: string;
+    fixed: string;
+};
+export declare function Table<T>({ columns, dataSource, rowKey, isRowClickable, total, pagination, tableLayout, testId, onChange, onRowClick, }: TableProps<T>): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map
