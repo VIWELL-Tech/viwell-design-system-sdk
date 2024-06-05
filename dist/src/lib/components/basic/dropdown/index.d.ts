@@ -10,7 +10,7 @@ interface ItemType {
     icon?: React.ReactNode;
     disabled?: boolean;
 }
-interface MenuInfo {
+export interface MenuInfo {
     key: string;
     item: ItemType;
 }

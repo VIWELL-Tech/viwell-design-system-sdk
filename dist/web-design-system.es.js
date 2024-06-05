@@ -213,8 +213,8 @@ function Oe({ title: t, titleId: n, ...r }, a) {
     }
   );
 }
-const Qe = f(Oe), Ue = A(Qe);
-function We(t, n) {
+const Qe = f(Oe), We = A(Qe);
+function Ue(t, n) {
   const { stroke: r = "#232323", ...a } = t;
   return /* @__PURE__ */ e(
     "svg",
@@ -239,7 +239,7 @@ function We(t, n) {
     }
   );
 }
-const Ke = f(We), xn = A(Ke);
+const Ke = f(Ue), xn = A(Ke);
 function Ge(t, n) {
   const { stroke: r = "#232323", ...a } = t;
   return /* @__PURE__ */ s(
@@ -766,7 +766,7 @@ const Tn = D.forwardRef(
     IsSearchInput: c,
     ...p
   }, y) => {
-    const w = u === "date", [L, j] = B(b), W = `
+    const w = u === "date", [L, j] = B(b), U = `
      w-full h-8 outline-0 placeholder-grey-200 bg-transparent disabled:text-grey-100 disabled:placeholder-grey-100 disabled:cursor-not-allowed
   ${!L && w ? "text-grey-200" : "text-system-black"} `, [M, h] = B(u), v = (N) => {
       j(!!N.target.value), d && d(N);
@@ -792,7 +792,7 @@ const Tn = D.forwardRef(
               id: n,
               ref: y,
               name: n,
-              className: W,
+              className: U,
               disabled: o,
               onChange: v,
               type: M,
@@ -825,12 +825,12 @@ const Tn = D.forwardRef(
 }, me = {
   BOTTOM_LEFT: "bottomLeft",
   BOTTOM_RIGHT: "bottomRight"
-}, Ut = {
+}, Wt = {
   [me.BOTTOM_LEFT]: "left-0 translate-y-1",
   [me.BOTTOM_RIGHT]: "right-0 translate-y-1"
 }, Rn = fe.forwardRef(
   ({ children: t, menu: n, disabled: r, placement: a = "bottomLeft", trigger: o = "hover", onClick: m, isCloseToTop: l = !1 }) => {
-    const i = Ut[a], d = l ? "top-0" : "", [u, g] = B(!1), b = P(() => {
+    const i = Wt[a], d = l ? "top-0" : "", [u, g] = B(!1), b = P(() => {
       o === "click" && !r && g((w) => !w);
     }, [o, r]), c = P(() => {
       o === "hover" && !r && g(!0);
@@ -877,13 +877,13 @@ const Tn = D.forwardRef(
   SMALL: "small",
   LARGE: "large",
   DEFAULT: "default"
-}, Wt = {
+}, Ut = {
   [se.DEFAULT]: "py-3 first:pt-0 last:pb-0",
   [se.SMALL]: "py-2 first:pt-0 last:pb-0",
   [se.LARGE]: "py-4 first:pt-0 last:pb-0"
 };
 function Kt({ dataSource: t, bordered: n = !0, testId: r, size: a = "default", ...o }) {
-  const m = Wt[a];
+  const m = Ut[a];
   return /* @__PURE__ */ e("div", { ...o, children: /* @__PURE__ */ e("ul", { role: "list", "data-testid": r, className: n ? ne.borderedList : "", children: t.length && t.map((l, i) => /* @__PURE__ */ s("li", { "data-testid": `list-item-${i}`, className: `${m} ${ne.listItem}`, children: [
     /* @__PURE__ */ e("div", { "data-testid": `list-title-${i}`, className: ne.listTile, children: l.title }),
     /* @__PURE__ */ e("div", { "data-testid": `list-value-${i}`, className: ne.listValue, children: l.value })
@@ -898,18 +898,18 @@ const ne = {
   t = t.replace(/^#/, "");
   const n = parseInt(t.slice(0, 2), 16), r = parseInt(t.slice(2, 4), 16), a = parseInt(t.slice(4, 6), 16);
   return `rgb(${n} ${r} ${a})`;
-}, U = {
+}, W = {
   Large: "large",
   SMALL: "small"
 }, zt = {
-  [U.Large]: "bg-grey-50 w-24 h-24 rounded-full inline-block relative",
-  [U.SMALL]: "bg-grey-50 w-[2rem] h-[2rem] rounded-full inline-block relative"
+  [W.Large]: "bg-grey-50 w-24 h-24 rounded-full inline-block relative",
+  [W.SMALL]: "bg-grey-50 w-[2rem] h-[2rem] rounded-full inline-block relative"
 }, $t = {
-  [U.Large]: "text-grey-200 leading-[6rem] font-extralight text-4xl absolute left-1/2 origin-left",
-  [U.SMALL]: "text-grey-200 leading-8 font-extralight absolute left-1/2 origin-left"
+  [W.Large]: "text-grey-200 leading-[6rem] font-extralight text-4xl absolute left-1/2 origin-left",
+  [W.SMALL]: "text-grey-200 leading-8 font-extralight absolute left-1/2 origin-left"
 }, qt = {
-  [U.Large]: "inline-flex w-24 h-24 items-center justify-center p-4",
-  [U.SMALL]: "inline-flex w-[2rem] h-[2rem] items-center justify-center p-2"
+  [W.Large]: "inline-flex w-24 h-24 items-center justify-center p-4",
+  [W.SMALL]: "inline-flex w-[2rem] h-[2rem] items-center justify-center p-2"
 }, be = fe.forwardRef(
   ({ size: t = "small", src: n, draggable: r, alt: a, children: o, id: m, abbreviateUpper: l, ...i }) => {
     const d = zt[t], u = $t[t], g = qt[t];
@@ -927,7 +927,7 @@ const ne = {
         );
       if (o && typeof o == "string") {
         const c = l ? Jt(o).toLocaleUpperCase() : o, y = {
-          transform: `scale(${Math.min(1, 2.5 / o.length)}) translateX(-50%)`
+          transform: `scale(${l ? 1 : Math.min(1, 2.5 / o.length)}) translateX(-50%)`
         };
         return /* @__PURE__ */ e("span", { className: u, style: y, "data-testid": "avatar-text-child", children: c });
       }
@@ -1035,7 +1035,7 @@ function Vn({
       w(x), d == null || d({ pagination: x, sort: c });
     },
     [d, c]
-  ), W = P(
+  ), U = P(
     (h) => (v) => {
       p((x) => {
         const N = (x == null ? void 0 : x.order) === "asc" ? "desc" : "asc", O = { key: h, order: N };
@@ -1064,7 +1064,7 @@ function Vn({
               "span",
               {
                 className: T.sortIcon,
-                onClick: W(h.key),
+                onClick: U(h.key),
                 "data-testId": `${h.key}-sorter`,
                 children: [
                   /* @__PURE__ */ e(Ht, { stroke: M(h.key, "asc") }),
@@ -1354,7 +1354,7 @@ const cn = {
   [q.POSITIVE]: "bg-system-light-green",
   [q.NEGATIVE]: "bg-brik-25"
 }, gn = {
-  [q.POSITIVE]: /* @__PURE__ */ e(Ue, { "data-testid": "snackbar-positive-icon" }),
+  [q.POSITIVE]: /* @__PURE__ */ e(We, { "data-testid": "snackbar-positive-icon" }),
   [q.NEGATIVE]: /* @__PURE__ */ e(Ye, { "data-testid": "snackbar-negative-icon" })
 };
 function Qn({ variant: t, message: n, testId: r, isVisible: a, onReset: o }) {
@@ -1372,7 +1372,7 @@ const he = {
   container: "fixed bottom-0 right-0 flex w-fit rounded-2xl p-5 shadow-md",
   iconContainer: "mr-2.5"
 };
-function Un({
+function Wn({
   ctaLabel: t,
   ctaIcon: n,
   testId: r,
@@ -1401,7 +1401,7 @@ const Q = {
   avatarFlex: "flex flex-col justify-center items-center gap-y-2",
   userText: "text-system-black font-medium text-md leading-lg"
 };
-function Wn({ onUpload: t, defaultImage: n }) {
+function Un({ onUpload: t, defaultImage: n }) {
   const r = we(null), [a, o] = B(""), m = (i) => {
     i.preventDefault(), r.current && r.current.click();
   }, l = (i) => {
@@ -1530,14 +1530,14 @@ function hn(t) {
         `pagination-item-${c}`
       )
     ), N;
-  }, ee = (p - 1) * (o ?? m) + 1, W = Math.min(p * (o ?? m), a ?? 0);
+  }, ee = (p - 1) * (o ?? m) + 1, U = Math.min(p * (o ?? m), a ?? 0);
   return /* @__PURE__ */ s("div", { className: k.mainContainer, "data-testid": g, ...b, children: [
     /* @__PURE__ */ e("div", { children: l && a !== void 0 && a > 0 && /* @__PURE__ */ s("div", { className: k.showTotal, "data-testid": "total-items", children: [
       /* @__PURE__ */ e("span", { className: "text-grey-200", children: "Showing" }),
       " ",
       ee,
       "-",
-      W,
+      U,
       " ",
       /* @__PURE__ */ e("span", { className: "text-grey-200", children: "of" }),
       " ",
@@ -1793,11 +1793,11 @@ export {
   Me as ArrowRightIcon,
   Ht as AscendingIcon,
   be as Avatar,
-  U as AvatarSizeVariants,
+  W as AvatarSizeVariants,
   On as Breadcrumb,
   ce as Button,
   H as ButtonVariants,
-  Ue as CheckIcon,
+  We as CheckIcon,
   En as Checkbox,
   Mn as ChevronDoubleRightIcon,
   pe as ChevronLeftIcon,
@@ -1830,7 +1830,7 @@ export {
   zn as PaginationSkeleton,
   yn as PlusIcon,
   xn as ProfileIcon,
-  Un as ProfileTable,
+  Wn as ProfileTable,
   Kn as ProfileTableSkeleton,
   Mt as RightTickIcon,
   Ft as SearchIcon,
@@ -1848,7 +1848,7 @@ export {
   F as Text,
   Z as TextColors,
   I as TextVariants,
-  Wn as UploadAvatar,
+  Un as UploadAvatar,
   qe as UploadIcon,
   Ln as UsersIcon,
   st as XIcon,
@@ -1867,7 +1867,7 @@ export {
   me as placementVariants,
   Q as profileStyles,
   Bn as pxToRem,
-  Wt as sizeVariantClasses,
+  Ut as sizeVariantClasses,
   ae as styles,
   z as tabStyles,
   $ as tableLayouts,
