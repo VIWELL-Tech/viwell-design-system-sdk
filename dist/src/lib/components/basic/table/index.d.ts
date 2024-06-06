@@ -18,6 +18,10 @@ export interface SortChange {
     key: string;
     order: 'asc' | 'desc';
 }
+export interface NoDataProps {
+    title?: string;
+    icon?: React.ReactNode;
+}
 export interface ChangeParams {
     pagination?: PaginationChange;
     sort?: SortChange;
@@ -41,6 +45,7 @@ export interface TableProps<T> extends Omit<HTMLAttributes<HTMLTableElement>, 'c
     total?: number;
     pagination?: boolean | PaginationProps;
     testId?: string;
+    noData?: NoDataProps;
     onChange?: (params: ChangeParams) => void;
     onRowClick?: (data: T, index?: number) => void;
 }
@@ -48,6 +53,6 @@ export declare const layoutVariantClasses: {
     auto: string;
     fixed: string;
 };
-export declare function Table<T>({ columns, dataSource, rowKey, isRowClickable, total, pagination, tableLayout, testId, onChange, onRowClick, }: TableProps<T>): React.JSX.Element;
+export declare function Table<T>({ columns, dataSource, rowKey, isRowClickable, total, pagination, tableLayout, testId, noData, onChange, onRowClick, }: TableProps<T>): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map

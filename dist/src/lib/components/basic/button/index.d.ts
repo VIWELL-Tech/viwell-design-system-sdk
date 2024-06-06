@@ -6,11 +6,12 @@ export declare const ButtonVariants: {
     readonly TEXT: "text";
     readonly SMALL_PRIMARY: "smallPrimary";
     readonly SMALL_STROKE: "smallStroke";
+    readonly ICON: "icon";
 };
 type BUTTONVARIANTS = keyof typeof ButtonVariants;
 export interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
     variant: (typeof ButtonVariants)[BUTTONVARIANTS];
-    label: string;
+    label?: string;
     disabled?: boolean;
     hasIcon?: boolean;
     icon?: ReactNode;
