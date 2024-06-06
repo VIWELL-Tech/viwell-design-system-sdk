@@ -684,7 +684,7 @@ const jt = p(Ft), Xt = b(jt), R = {
   [R.TEXT]: "flex justify-center items-center gap-x-2 text-system-black text-sm font-medium leading-md group hover:text-grey-300 disabled:text-grey-100",
   [R.SMALL_PRIMARY]: "flex justify-center items-center gap-x-1 bg-system-white px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full shadow-md min-w-20 group hover:text-grey-300 hover:bg-grey-25 disabled:text-grey-100 disabled:bg-grey-25",
   [R.SMALL_STROKE]: "flex justify-center items-center gap-x-1 px-3 py-2 h-8 text-system-black font-medium text-xs leading-sm rounded-full border-1 border-system-black min-w-20 group hover:text-grey-200 hover:border-grey-200 disabled:text-grey-100 disabled:border-grey-100",
-  [R.ICON]: "flex justify-center items-center w-5 h-5 rounded-full hover:bg-system-white shadow-md"
+  [R.ICON]: "flex justify-center items-center w-5 h-5 rounded-full hover:bg-system-white hover:shadow-md"
 }, Ot = {
   [R.PRIMARY]: "stroke-system-white",
   [R.SECONDARY]: "stroke-system-black group-hover:stroke-grey-300 group-disabled:stroke-grey-100",
@@ -1014,7 +1014,7 @@ function tn({ title: t, icon: n }) {
   ] });
 }
 const nn = {
-  container: "flex flex-col justify-center items-center gap-y-6 h-full"
+  container: "flex flex-col justify-center items-center gap-y-6 min-h-[50vh]"
 }, z = {
   FIXED: "fixed",
   AUTO: "auto"
@@ -1115,7 +1115,7 @@ function Zn({
   ] });
 }
 const I = {
-  outerContainer: "flex flex-col gap-y-10 h-[70vh] justify-between",
+  outerContainer: "flex flex-col gap-y-10 min-h-[50vh] justify-between",
   tableContainer: "border-collapse w-full",
   tableHeaderRow: "border-b-2 border-grey-100",
   tHead: "font-brand text-xs font-medium leading-sm text-grey-200 p-3 first:ps-0 text-left",
@@ -1126,7 +1126,7 @@ const I = {
   sortTitle: "relative flex-1",
   sortIcon: "ms-1 inline-flex items-center justify-center gap-x-[2px] cursor-pointer",
   ellipsisColumn: "truncate",
-  noDataContainer: "h-[70vh]"
+  noDataContainer: "min-h-[50vh]"
 }, Pn = V.forwardRef(
   ({ name: t, title: n, disabled: r, testId: a, error: o, errorMessage: g, ...l }, i) => /* @__PURE__ */ s(_, { children: [
     /* @__PURE__ */ s(
