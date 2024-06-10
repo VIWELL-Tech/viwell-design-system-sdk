@@ -1845,7 +1845,7 @@ const Y = {
     /* @__PURE__ */ e("div", { className: q.tabContent, children: r.map((g) => /* @__PURE__ */ e("div", { "data-testid": `tab-content-${g.key}`, children: m(g.key) && g.children }, g.key)) })
   ] });
 }), q = {
-  tabWrapper: "grid grid-flow-col relative after:absolute after:border-b-2 after:border-grey-50 after:bottom-0 after:w-full",
+  tabWrapper: "grid grid-flow-col relative z-0 after:absolute after:border-b-2 after:border-grey-50 after:bottom-0 after:w-full",
   tabItem: "flex justify-center items-center py-4 font-medium text-bas gap-x-2 transition-colors duration-300",
   activeTab: "border-b-2 border-system-black z-10 transition-colors duration-300",
   tabContent: "mt-4",
