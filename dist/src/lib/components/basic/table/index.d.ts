@@ -33,6 +33,7 @@ export interface ColumnType<T> {
     dataIndex?: DataIndex;
     sort?: boolean;
     ellipsis?: boolean;
+    width?: string | number;
     render?: (record: T, index: number) => React.ReactNode;
 }
 export type ColumnsType<T = unknown> = Array<ColumnType<T>>;
