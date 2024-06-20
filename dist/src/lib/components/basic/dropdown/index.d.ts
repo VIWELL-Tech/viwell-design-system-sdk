@@ -22,6 +22,7 @@ export interface DropdownProps {
     trigger?: 'click' | 'hover';
     onClick?: (info: MenuInfo) => void;
     isCloseToTop?: boolean;
+    menuTopChildren?: React.ReactNode;
 }
 export declare const Dropdown: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLButtonElement>>;
 export {};
