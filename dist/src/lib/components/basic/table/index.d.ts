@@ -20,9 +20,10 @@ export interface PaginationChange {
     page: number;
     pageSize: number;
 }
+export type SortOrder = 'asc' | 'desc';
 export interface SortChange {
     key: string;
-    order: 'asc' | 'desc';
+    order: SortOrder;
 }
 export interface NoDataProps {
     title?: string;
@@ -30,7 +31,7 @@ export interface NoDataProps {
 }
 export interface SortProps {
     key: string;
-    order: 'asc' | 'desc';
+    order: SortOrder;
 }
 export interface ChangeParams {
     pagination?: PaginationChange;
