@@ -7,8 +7,14 @@ export declare const tableLayouts: {
 };
 type TableLayout = keyof typeof tableLayouts;
 type TableLayoutType = (typeof tableLayouts)[TableLayout];
+export declare const textAlignments: {
+    readonly LEFT: "left";
+    readonly CENTER: "center";
+    readonly RIGHT: "right";
+};
+type textAlignment = keyof typeof textAlignments;
+type AlignType = (typeof textAlignments)[textAlignment];
 type DataIndex = string | number | ReadonlyArray<string | number>;
-type AlignType = 'left' | 'center' | 'right';
 type GetRowKey<T> = (record: T, index?: number) => Key;
 export interface PaginationChange {
     page: number;
@@ -21,6 +27,10 @@ export interface SortChange {
 export interface NoDataProps {
     title?: string;
     icon?: React.ReactNode;
+}
+export interface SortProps {
+    key: string;
+    order: 'asc' | 'desc';
 }
 export interface ChangeParams {
     pagination?: PaginationChange;
@@ -47,6 +57,7 @@ export interface TableProps<T> extends Omit<HTMLAttributes<HTMLTableElement>, 'c
     pagination?: boolean | PaginationProps;
     testId?: string;
     noData?: NoDataProps;
+    sort?: SortProps;
     onChange?: (params: ChangeParams) => void;
     onRowClick?: (data: T, index?: number) => void;
 }
@@ -54,6 +65,11 @@ export declare const layoutVariantClasses: {
     auto: string;
     fixed: string;
 };
-export declare function Table<T>({ columns, dataSource, rowKey, isRowClickable, total, pagination, tableLayout, testId, noData, onChange, onRowClick, }: TableProps<T>): React.JSX.Element;
+export declare const textAlignClasses: {
+    left: string;
+    center: string;
+    right: string;
+};
+export declare function Table<T>({ columns, dataSource, rowKey, isRowClickable, total, pagination, tableLayout, testId, noData, sort, onChange, onRowClick, }: TableProps<T>): React.JSX.Element;
 export {};
 //# sourceMappingURL=index.d.ts.map
