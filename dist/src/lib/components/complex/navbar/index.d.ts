@@ -20,6 +20,7 @@ export interface NavbarProps extends Omit<HTMLAttributes<HTMLDivElement>, 'class
         actionItem: React.ReactNode;
         disabled?: boolean;
     }>;
+    onLogoClick?: () => void;
 }
 export declare const Navbar: React.ForwardRefExoticComponent<NavbarProps & React.RefAttributes<HTMLDivElement>>;
 export declare const navStyles: {
@@ -32,6 +33,8 @@ export declare const navStyles: {
     disabledNavLink: string;
     rightActionItem: string;
     disabledRightActionItem: string;
+    logo: string;
+    menuItem: string;
 };
 export {};
 //# sourceMappingURL=index.d.ts.map
