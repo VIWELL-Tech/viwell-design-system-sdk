@@ -4,9 +4,9 @@ export declare const placementVariants: {
     readonly BOTTOM_RIGHT: "bottomRight";
 };
 type PlacementVariantsType = keyof typeof placementVariants;
-interface ItemType {
+export interface ItemType {
     key: string;
-    label: string;
+    label: string | React.ReactNode;
     icon?: React.ReactNode;
     disabled?: boolean;
 }
