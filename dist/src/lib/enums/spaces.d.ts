@@ -28,6 +28,7 @@ export declare const SPACES: {
     44: string;
     48: string;
     52: string;
+    53: string;
     56: string;
     60: string;
     64: string;
