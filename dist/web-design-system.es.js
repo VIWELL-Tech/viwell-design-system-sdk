@@ -1907,9 +1907,6 @@ const U = {
   tabContent: "mt-4",
   disabledItem: "cursor-not-allowed opacity-30"
 };
-function Va(e) {
-  return /* @__PURE__ */ a(qn, { ...e });
-}
 function W(e) {
   const t = Object.prototype.toString.call(e);
   return e instanceof Date || typeof e == "object" && t === "[object Date]" ? new e.constructor(+e) : typeof e == "number" || t === "[object Number]" || typeof e == "string" || t === "[object String]" ? new Date(e) : /* @__PURE__ */ new Date(NaN);
@@ -3122,7 +3119,7 @@ const aa = [
     label: "Settings"
   }
 ];
-function Ya({
+function Va({
   dto: e,
   onDropDownItemClick: t,
   onRowClick: n,
@@ -3220,6 +3217,9 @@ const sa = {
   container: "flex flex-col pt-8 pb-10",
   paginationContainer: "w-full pt-10"
 };
+function Ya(e) {
+  return /* @__PURE__ */ a(qn, { ctaLabel: "Edit", ...e });
+}
 export {
   la as AppleIcon,
   pt as ArrowDownIcon,
@@ -3260,7 +3260,7 @@ export {
   Sa as Navbar,
   jn as NavbarVariants,
   fa as OrganizationIcon,
-  Ya as OrganizationTable,
+  Va as OrganizationTable,
   Kn as Pagination,
   Ba as PaginationSkeleton,
   ha as PlusIcon,
@@ -3286,7 +3286,7 @@ export {
   P as TextVariants,
   Da as UploadAvatar,
   It as UploadIcon,
-  Va as UserProfileTable,
+  Ya as UserProfileTable,
   ga as UsersIcon,
   Ft as XIcon,
   Tn as abbreviateString,
