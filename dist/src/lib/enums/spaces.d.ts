@@ -40,8 +40,14 @@ export declare const SPACES: {
     120: string;
     150: string;
     180: string;
+    250: string;
+    300: string;
+    400: string;
+    450: string;
+    490: string;
     500: string;
-    688: string;
+    625: string;
     640: string;
+    688: string;
 };
 //# sourceMappingURL=spaces.d.ts.map
