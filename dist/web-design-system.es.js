@@ -1449,7 +1449,7 @@ function qn({
     /* @__PURE__ */ a("div", { className: ee.contentArea, children: /* @__PURE__ */ d("div", { className: ee.content, children: [
       /* @__PURE__ */ d("div", { className: ee.avatarFlex, children: [
         /* @__PURE__ */ a(Te, { size: "large", ...s }),
-        /* @__PURE__ */ a("div", { className: ee.userText, children: o })
+        !!o && /* @__PURE__ */ a("div", { className: ee.userText, children: o })
       ] }),
       /* @__PURE__ */ a(Sn, { bordered: !0, size: "default", ...l })
     ] }) })
